@@ -1,0 +1,68 @@
+---
+import { Clock, AlertCircle } from "@lucide/astro";
+---
+
+<section
+  class="py-24 bg-gradient-to-br from-purple-700 to-purple-900 text-white"
+  id="final-cta"
+>
+  <div class="container mx-auto px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <div class="flex items-center justify-center mb-8">
+        <Clock class="w-10 h-10 mr-3" />
+        <h2 class="text-3xl md:text-4xl font-bold">Não espere mais</h2>
+      </div>
+
+      <p class="text-xl leading-relaxed mb-10 text-purple-100">
+        Cada dia sem acesso ao conhecimento é uma porta fechada para o
+        desenvolvimento. Não permita que o silêncio esconda o potencial de quem
+        você ama.
+      </p>
+
+      <p class="text-2xl font-semibold mb-12">
+        A transformação começa por você.
+      </p>
+
+      <div class="bg-white bg-opacity-10 p-6 md:p-10 rounded-xl mb-12">
+        <div class="flex items-start mb-6">
+          <AlertCircle
+            class="w-6 h-6 text-amber-300 mt-1 mr-3 flex-shrink-0"
+          />
+          <p class="text-lg text-left">
+            Por tempo limitado, estamos oferecendo o livro físico com frete
+            grátis para todo o Brasil.
+          </p>
+        </div>
+
+        <div
+          class="flex flex-col md:flex-row justify-center items-center gap-8"
+        >
+          <div class="bg-white text-purple-900 p-6 rounded-lg text-center">
+            <p class="text-sm uppercase font-semibold mb-1">Preço normal</p>
+            <p class="text-2xl font-bold line-through">R$ 97,00</p>
+          </div>
+
+          <div
+            class="bg-amber-500 text-purple-900 p-6 rounded-lg text-center transform scale-110"
+          >
+            <p class="text-sm uppercase font-semibold mb-1">
+              Oferta especial
+            </p>
+            <p class="text-3xl font-bold">R$ 77,00</p>
+            <p class="text-sm mt-1">+ Frete Grátis</p>
+          </div>
+        </div>
+      </div>
+
+      <button
+        class="bg-amber-500 hover:bg-amber-600 text-purple-900 font-bold py-5 px-10 rounded-lg text-xl md:text-2xl transition-all transform hover:scale-105 duration-300 shadow-lg"
+      >
+        Adquira seu exemplar agora!
+      </button>
+
+      <p class="mt-8 text-sm text-purple-200">
+        Envio imediato para todo o Brasil. Pagamento seguro.
+      </p>
+    </div>
+  </div>
+</section>

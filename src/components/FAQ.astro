@@ -1,0 +1,192 @@
+---
+
+---
+
+<section class="py-10 bg-gray-50 sm:py-16 lg:py-24">
+  <h2 class="text-3xl font-bold text-center text-red-500">
+    Perguntas Frequentes
+  </h2>
+  <div class="px-4 max-w-7xl mx-auto sm:px-6 lg:px-8">
+    <div class="mx-auto mt-8 space-y-4 md:mt-16">
+      <div
+        class="transition-all duration-200 bg-white border border-gray-200 shadow-lg cursor-pointer hover:bg-gray-50"
+      >
+        <button
+          type="button"
+          id="question1"
+          data-state="closed"
+          class="cursor-pointer flex items-center justify-between w-full px-4 py-5 sm:p-6"
+        >
+          <span class="flex text-lg font-semibold text-red-600"
+            >RPM só ensina alunos autistas?</span
+          >
+          <svg
+            id="arrow1"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            class="w-6 h-6 text-gray-400"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        <div
+          id="answer1"
+          style="display:none"
+          class="px-4 pb-5 sm:px-6 sm:pb-6"
+        >
+          <p>
+            Embora o RPM tenha começado com alunos autistas não falantes, com o
+            tempo desenvolveu-se e já foi utilizado com sucesso com alunos com
+            diferentes deficiências: <strong
+              >Síndrome de Angelman, Paralisia Cerebral, Síndrome de Down</strong
+            >, entre outras deficiências..
+          </p>
+        </div>
+      </div>
+      <div
+        class="transition-all duration-200 bg-white border border-gray-200 shadow-lg cursor-pointer hover:bg-gray-50"
+      >
+        <button
+          type="button"
+          id="question2"
+          data-state="closed"
+          class="cursor-pointer flex items-center justify-between w-full px-4 py-5 sm:p-6"
+        >
+          <span class="flex text-lg font-semibold text-red-600"
+            >Com qual idade meu filho/aluno pode fazer RPM?</span
+          >
+          <svg
+            id="arrow2"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            class="w-6 h-6 text-gray-400"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        <div
+          id="answer2"
+          style="display:none"
+          class="px-4 pb-5 sm:px-6 sm:pb-6"
+        >
+          <p>
+            Não há idade para RPM. A aprendizagem se dá ao longo da vida. Nunca
+            é tarde para aprender.
+          </p>
+        </div>
+      </div>
+      <div
+        class="transition-all duration-200 bg-white border border-gray-200 shadow-lg cursor-pointer hover:bg-gray-50"
+      >
+        <button
+          type="button"
+          id="question3"
+          data-state="closed"
+          class="cursor-pointer flex items-center justify-between w-full px-4 py-5 sm:p-6"
+        >
+          <span class="flex text-lg font-semibold text-red-600"
+            >O aluno pode fazer RPM mesmo não sendo alfabetizado?</span
+          >
+          <svg
+            id="arrow3"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            class="w-6 h-6 text-gray-400"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        <div
+          id="answer3"
+          style="display:none"
+          class="px-4 pb-5 sm:px-6 sm:pb-6"
+        >
+          <p>
+            Sem dúvida! Um professor de RPM avaliará o conhecimento prévio do
+            aluno durante as primeiras sessões e, se o aluno não tiver
+            conhecimentos fundamentais, o professor ensinará ao longo do
+            percurso através de lições do método RPM.
+          </p>
+        </div>
+      </div>
+      <div
+        class="transition-all duration-200 bg-white border border-gray-200 shadow-lg cursor-pointer hover:bg-gray-50"
+      >
+        <button
+          type="button"
+          id="question4"
+          data-state="closed"
+          class="cursor-pointer flex items-center justify-between w-full px-4 py-5 sm:p-6"
+        >
+          <span class="flex text-lg font-semibold text-red-600"
+            >RPM é somente para profissionais?</span
+          >
+          <svg
+            id="arrow4"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            class="w-6 h-6 text-gray-400"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        <div
+          id="answer4"
+          style="display:none"
+          class="px-4 pb-5 sm:px-6 sm:pb-6"
+        >
+          <p>
+            Não, o RPM é para qualquer pessoa interessada na implementação do
+            método de ensino Soma®RPM, com seu filho/aluno, independente se
+            você for familiar, professor, atendente terapêutico, terapeuta
+            ocupacional, fonoaudiólogo.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // JavaScript to toggle the answers and rotate the arrows
+  document
+    .querySelectorAll('[id^="question"]')
+    .forEach(function (button, index) {
+      button.addEventListener("click", function () {
+        var answer = document.getElementById("answer" + (index + 1));
+        var arrow = document.getElementById("arrow" + (index + 1));
+
+        if (answer.style.display === "none" || answer.style.display === "") {
+          answer.style.display = "block";
+          arrow.style.transform = "rotate(0deg)";
+        } else {
+          answer.style.display = "none";
+          arrow.style.transform = "rotate(-180deg)";
+        }
+      });
+    });
+</script>

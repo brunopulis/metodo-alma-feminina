@@ -1,0 +1,77 @@
+---
+import { Brain, CheckCircle } from "@lucide/astro";
+
+import config from "@/data/site-config.json";
+
+const benefits = [
+  "Aprendam assuntos acadêmicos apropriados à idade",
+  "Se comuniquem com sentido, usando pranchas, teclados ou fala",
+  "Desenvolvam raciocínio, tolerância sensorial e habilidades para a vida",
+  "Sejam tratadas com dignidade, respeito e fé em seu potencial",
+];
+---
+
+<section class="py-20 bg-slate-100" id="about-rpm">
+  <div class="container mx-auto px-4">
+    <div class="max-w-5xl mx-auto">
+      <div class="flex flex-col items-center text-center mb-16">
+        <div
+          class="w-16 h-16 rounded-full bg-primary flex items-center justify-center mb-6"
+        >
+          <Brain class="w-8 h-8 text-white" />
+        </div>
+        <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">
+          Sobre o RPM
+        </h2>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+        <div class="md:flex">
+          <div
+            class="md:w-1/2 p-8 md:p-12 bg-gradient-to-br from-red-600 to-red-800 text-white"
+          >
+            <h3 class="text-2xl font-semibold mb-6">O que é o RPM?</h3>
+            <p class="text-lg leading-relaxed mb-8">
+              O Soma® RPM é um método de ensino que respeita as diferenças
+              sensoriais e motoras do aluno e parte do princípio de presumir
+              competência.
+            </p>
+            <p class="text-lg leading-relaxed mb-8">
+              Ele permite que pessoas com autismo não falante:
+            </p>
+          </div>
+          <div class="md:w-1/2 p-8 md:p-12">
+            <div class="space-y-6">
+              {
+                benefits.map((benefit) => (
+                  <div class="flex items-start">
+                    <CheckCircle class="w-6 h-6 text-green-600 mt-1 mr-3 flex-shrink-0" />
+                    <p class="text-lg text-gray-800">{benefit}</p>
+                  </div>
+                ))
+              }
+            </div>
+
+            <div class="mt-10 p-6 bg-slate-100 rounded-lg">
+              <blockquote class="text-xl font-bold italic text-gray-700">
+                "Desperdiçar uma mente é algo terrível."
+              </blockquote>
+              <p class="mt-4 font-medium text-gray-700">
+                — Soma Mukhopadhyay
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-12 flex justify-center">
+        <a
+          href={config.checkout.url}
+          class="bg-red-600 cursor-pointer hover:bg-purple-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all transform hover:scale-105 duration-300"
+        >
+          Quero descobrir o RPM agora!
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

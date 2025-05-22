@@ -1,0 +1,36 @@
+---
+import { Clock, AlertCircle } from "@lucide/astro";
+
+import config from "@/data/site-config.json";
+---
+
+<section class="py-24 bg-gradient-to-br from-red-600 to-red-800 text-white" id="final-cta">
+  <div class="container mx-auto px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <div class="flex items-center justify-center mb-8">
+        <Clock class="w-10 h-10 mr-3" />
+        <h2 class="text-3xl md:text-4xl font-bold">Não espere mais</h2>
+      </div>
+
+      <p class="text-xl leading-relaxed mb-10 text-purple-100">
+        Cada dia sem acesso ao conhecimento é uma porta fechada para o
+        desenvolvimento. Não permita que o silêncio esconda o potencial de quem
+        você ama.
+      </p>
+
+      <p class="text-2xl font-semibold mb-12">
+        A transformação começa por você.
+      </p>
+      <a
+        href={config.checkout.url}
+        class="bg-white hover:bg-transparent text-red-600 font-bold py-5 px-10 rounded-lg text-xl md:text-2xl transition-all transform hover:scale-105 duration-300 shadow-lg"
+      >
+        Adquira seu exemplar agora
+      </a>
+
+      <p class="mt-8 text-sm text-white">
+        Envio imediato para todo o Brasil. Pagamento seguro.
+      </p>
+    </div>
+  </div>
+</section>

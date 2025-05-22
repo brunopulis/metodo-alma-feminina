@@ -1,0 +1,87 @@
+---
+import authors from "@/data/authors.json";
+import { Image } from "astro:assets";
+import { Users } from '@lucide/astro';
+
+// Importações das imagens
+import renata from "/public/assets/images/profiles/6.png";
+import fabiani from "/public/assets/images/profiles/5.png";
+import flaviana from "/public/assets/images/profiles/4.png";
+
+// Mapeamento correto das imagens
+const profileImages = {
+  "6.png": renata,
+  "5.png": fabiani,
+  "4.png": flaviana,
+};
+
+// Função auxiliar para garantir que a imagem existe
+const getImageSource = (imageName) => {
+  const image = profileImages[imageName];
+
+  if (!image) {
+    console.warn(`Imagem não encontrada: ${imageName}`);
+    return renata; // fallback para uma imagem padrão
+  }
+
+  console.log(image);
+  return image;
+};
+---
+
+<section class="py-20 bg-slate-100" id="translators">
+  <div class="container mx-auto px-4">
+    <div class="max-w-5xl mx-auto">
+      <div class="flex flex-col items-center text-center mb-16">
+        <div
+          class="w-16 h-16 rounded-full bg-white flex items-center justify-center mb-6"
+        >
+          <Users class="w-8 h-8 text-red-500" />
+        </div>
+        <h2 class="text-3xl md:text-4xl font-bold text-red-600 mb-4">
+          Quem Traduziu?
+        </h2>
+        <p class="text-lg max-w-3xl">Traduzido por quem vive isso na pele</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {
+        authors.authors.map((author) => {
+          const imageName = author.avatar.split("/").pop();
+          const imageSource = getImageSource(imageName);
+
+          return (
+            <div class="bg-white dark:bg-gray-800 shadow-lg rounded-lg overflow-hidden">
+              <Image
+                src={imageSource}
+                alt={`Foto de ${author.name}`}
+                class="w-full h-48 object-cover"
+                width={300}
+                height={300}
+              />
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-red-600">{author.name}</h3>
+                <p class="text-sm text-gray-600 dark:text-gray-400">
+                  {author.role}
+                </p>
+                <p class="mb-3 py-4 text-gray-500 dark:text-gray-300">
+                  {author.content}
+                </p>
+              </div>
+            </div>
+          );
+        })
+      }
+      </div>
+
+      <div class="mt-6 p-6 rounded-lg text-center">
+        <p class="text-lg font-bold text-gray-800 flex items-center justify-center">
+          <span class="text-2xl mr-2">💡</span>
+          Pessoas reais, com histórias reais, trazendo esse conhecimento direto para
+          você.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+

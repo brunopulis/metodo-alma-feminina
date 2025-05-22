@@ -1,0 +1,22 @@
+{
+  "authors": [
+    {
+      "avatar": "/public/assets/images/profiles/5.png",
+      "name": "Fabiani Malheiros Eggers",
+      "role": "Consultora de RPM no Brasil",
+      "content": "É mãe de Eduardo, 23 anos, um jovem adulto autista minimamente falante. Começou a ensiná-lo, usando o Método RPM, em 2021. Criou o Instagram - @rpm.brasil - e tem compartilhado seu conhecimento com outras famílias brasileiras. Cria e publica conteúdo para as redes sociais de Soma Mukhopadhyay, criadora do RPM.Sua missão é difundir o RPM no Brasil."
+    },
+    {
+      "avatar": "/public/assets/images/profiles/4.png",
+      "name": "Flaviana Decker",
+      "role": "Consultora de RPM no Brasil",
+      "content": "Ensina RPM desde 2014. Apoia o crescimento acadêmico e esportivo de Victoria, promovendo uma vida além da prancha de letras"
+    },
+    {
+      "avatar": "/public/assets/images/profiles/6.png",
+      "name": "Renata Bonotto",
+      "role": "Doutora em Informática na Educação, especialista em Comunicação Aumentativa e Alternativa.",
+      "content": "Mãe de Vinícius, adolescente autista e usuário de Comunicação Aumentativa e Alternativa. Acredita que todos podem aprender e se comunicar quando adotamos a perspectiva adequada. Ajuda famílias, professores e profissionais a implementarem estratégias para eliminar barreiras"
+    }
+  ]
+}
