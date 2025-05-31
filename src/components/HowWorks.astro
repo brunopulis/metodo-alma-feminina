@@ -1,0 +1,87 @@
+---
+import config from "@/data/site-config.json";
+
+import { BookText, CheckCircle, ArrowRight } from "@lucide/astro";
+
+import Link from "@/components/ui/Link.astro";
+
+
+const benefits = [
+  {
+    title: "30 aulas gravadas",
+    description:
+      " Conteúdos profundos para cura emocional e redescoberta da sua identidade.",
+  },
+  {
+    title: "30 devocionais diários",
+    description:
+      "Reflexões que vão iluminar sua jornada espiritual todos os dias.",
+  },
+  {
+    title: "1 aula presencial exclusiva (via Zoom)",
+    description:
+      "Conexão, partilha e fortalecimento da fé com outras mulheres.",
+  },
+];
+---
+
+<section class="py-20 bg-white" id="benefits">
+  <div class="text-center md:mx-auto mb-8 md:mb-12 max-w-3xl">
+    <p
+      class="font-bold dark:text-blue-200 text-base text-secondary tracking-wide uppercase"
+    >
+      Como funciona
+    </p>
+    <h2
+      class="font-bold leading-tighter font-heading tracking-tighter text-heading md:text-4xl text-3xl"
+    >
+      O que você irá aprender?
+    </h2>
+  </div>
+  <div class="container mx-auto px-4">
+    <div class="max-w-5xl mx-auto">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {
+          benefits.map((benefit, index) => (
+            <div
+              class="card p-6 border border-gray-200 dark:border-gray-700 slide-up"
+              style={`animation-delay: ${index * 100}ms`}
+            >
+              <div
+                class={`w-12 h-12 rounded-lg bg-${benefit.color}-100 dark:bg-${benefit.color}-900/30 flex items-center justify-center mb-6`}
+              >
+                <svg
+                  class={`w-6 h-6 text-${benefit.color}-600 dark:text-${benefit.color}-400`}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d={benefit.icon}
+                  />
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold mb-3 text-gray-900 dark:text-white">
+                {benefit.title}
+              </h3>
+              <p class="text-gray-600 dark:text-gray-300">
+                {benefit.description}
+              </p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+
+    <div class="mt-10 flex justify-center">
+      <Link
+        href="https://chk.eduzz.com/89AQJ7P8WD"
+        label="Quero vive essa transformação"
+      />
+    </div>
+  </div>
+</section>

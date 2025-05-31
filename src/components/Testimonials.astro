@@ -1,20 +1,16 @@
 ---
-import { Quote, Star } from '@lucide/astro';
+import { Star } from '@lucide/astro';
 ---
 
-<section class="py-20 bg-gray-50" id="testimonials">
+<section class="py-20 bg-[#FFF4F2]" id="testimonials">
   <div class="container mx-auto px-4">
     <div class="max-w-5xl mx-auto">
       <div class="flex flex-col items-center text-center mb-16">
-        <div class="w-16 h-16 rounded-full bg-white flex items-center justify-center mb-6">
-          <Quote class="w-8 h-8 text-red-600" />
-        </div>
-        <h2 class="text-3xl md:text-4xl font-bold text-red-600 mb-4">
-          Depoimentos
+    
+        <h2 class="text-3xl md:text-4xl font-bold text-accent-500 mb-4">
+          O que nossas alunas estão dizendo
         </h2>
-        <p class="text-lg text-gray-600 max-w-3xl">
-          Descubra como o método RPM está transformando vidas e criando novas possibilidades para famílias em todo o Brasil
-        </p>
+        <p class="text-lg text-gray-600 max-w-3xl">Histórias reais de transformação que inspiram.</p>
       </div>
 
       <div class="grid md:grid-cols-2 gap-8 mb-16">
@@ -28,6 +24,16 @@ import { Quote, Star } from '@lucide/astro';
             quote: "O RPM mudou a minha visão, a minha postura e a minha esperança com relação ao meu filho. É uma porta sem volta para a transformação.",
             author: "Rosana Calixto de Melo",
             stars: 5
+          },
+          {
+            quote: "O RPM mudou a minha visão, a minha postura e a minha esperança com relação ao meu filho. É uma porta sem volta para a transformação.",
+            author: "Rosana Calixto de Melo",
+            stars: 5
+          },
+          {
+            quote: "O RPM mudou a minha visão, a minha postura e a minha esperança com relação ao meu filho. É uma porta sem volta para a transformação.",
+            author: "Rosana Calixto de Melo",
+            stars: 4
           }
         ].map((testimonial) => (
           <div

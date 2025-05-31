@@ -1,175 +1,175 @@
 ---
-
+import Link from "@/components/ui/Link.astro";
 ---
 
-<section class="py-10 bg-gray-50 sm:py-16 lg:py-24">
-  <h2 class="text-3xl font-bold text-center text-red-500">
-    Perguntas Frequentes
-  </h2>
-  <div class="px-4 max-w-7xl mx-auto sm:px-6 lg:px-8">
-    <div class="mx-auto mt-8 space-y-4 md:mt-16">
-      <div
-        class="transition-all duration-200 bg-white border border-gray-200 shadow-lg cursor-pointer hover:bg-gray-50"
+<section class="relative not-prose scroll-mt-[72px]" id="faq">
+  <div class="inset-0 absolute pointer-events-none -z-[1]" aria-hidden="true">
+    <div class="inset-0 absolute"></div>
+  </div>
+  <div
+    class="relative mx-auto px-4 lg:py-20 md:px-6 md:py-10 py-10 text-default max-w-6xl"
+  >
+    <div class="text-center md:mx-auto mb-8 md:mb-12 max-w-3xl">
+      <h2
+        class="font-bold leading-tighter font-heading tracking-tighter text-heading md:text-4xl text-3xl"
       >
-        <button
-          type="button"
-          id="question1"
-          data-state="closed"
-          class="cursor-pointer flex items-center justify-between w-full px-4 py-5 sm:p-6"
-        >
-          <span class="flex text-lg font-semibold text-red-600"
-            >RPM só ensina alunos autistas?</span
-          >
-          <svg
-            id="arrow1"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            class="w-6 h-6 text-gray-400"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M19 9l-7 7-7-7"></path>
-          </svg>
-        </button>
-        <div
-          id="answer1"
-          style="display:none"
-          class="px-4 pb-5 sm:px-6 sm:pb-6"
-        >
-          <p>
-            Embora o RPM tenha começado com alunos autistas não falantes, com o
-            tempo desenvolveu-se e já foi utilizado com sucesso com alunos com
-            diferentes deficiências: <strong
-              >Síndrome de Angelman, Paralisia Cerebral, Síndrome de Down</strong
-            >, entre outras deficiências..
-          </p>
+        Perguntas Frequentes
+      </h2>
+    </div>
+    <div class="mx-auto gap-8 grid md:gap-y-12 sm:grid-cols-2 gap-y-8">
+      <div>
+        <div class="flex flex-row max-w-none">
+          <div class="flex justify-center">
+            <svg
+              class="rtl:mr-0 flex-shrink-0 h-6 mr-2 mt-1 rtl:ml-2 text-primary w-6"
+              height="1em"
+              viewBox="0 0 24 24"
+              width="1em"
+              data-icon="tabler:chevron-right"
+            >
+              <symbol id="ai:tabler:chevron-right">
+                <path
+                  d="m9 6l6 6l-6 6"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"></path>
+              </symbol>
+              <use xlink:href="#ai:tabler:chevron-right"></use>
+            </svg>
+          </div>
+          <div class="mt-0.5">
+            <h3 class="font-bold text-xl">Preciso ter conhecimento da Bíblia para participar?</h3>
+            <p class="text-muted mt-3">
+              Não. A mentoria é para todas — do começo da caminhada até quem já tem intimidade com a Palavra.
+            </p>
+          </div>
         </div>
       </div>
-      <div
-        class="transition-all duration-200 bg-white border border-gray-200 shadow-lg cursor-pointer hover:bg-gray-50"
-      >
-        <button
-          type="button"
-          id="question2"
-          data-state="closed"
-          class="cursor-pointer flex items-center justify-between w-full px-4 py-5 sm:p-6"
-        >
-          <span class="flex text-lg font-semibold text-red-600"
-            >Com qual idade meu filho/aluno pode fazer RPM?</span
-          >
-          <svg
-            id="arrow2"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            class="w-6 h-6 text-gray-400"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M19 9l-7 7-7-7"></path>
-          </svg>
-        </button>
-        <div
-          id="answer2"
-          style="display:none"
-          class="px-4 pb-5 sm:px-6 sm:pb-6"
-        >
-          <p>
-            Não há idade para RPM. A aprendizagem se dá ao longo da vida. Nunca
-            é tarde para aprender.
-          </p>
+      <div>
+        <div class="flex flex-row max-w-none">
+          <div class="flex justify-center">
+            <svg
+              class="rtl:mr-0 flex-shrink-0 h-6 mr-2 mt-1 rtl:ml-2 text-primary w-6"
+              height="1em"
+              viewBox="0 0 24 24"
+              width="1em"
+              data-icon="tabler:chevron-right"
+            >
+              <use xlink:href="#ai:tabler:chevron-right"></use>
+            </svg>
+          </div>
+          <div class="mt-0.5">
+            <h3 class="font-bold text-xl">Como acesso as aulas?</h3>
+            <p class="text-muted mt-3">
+              Você receberá login para uma plataforma online onde poderá assistir às aulas no seu ritmo.
+            </p>
+          </div>
         </div>
       </div>
-      <div
-        class="transition-all duration-200 bg-white border border-gray-200 shadow-lg cursor-pointer hover:bg-gray-50"
-      >
-        <button
-          type="button"
-          id="question3"
-          data-state="closed"
-          class="cursor-pointer flex items-center justify-between w-full px-4 py-5 sm:p-6"
-        >
-          <span class="flex text-lg font-semibold text-red-600"
-            >O aluno pode fazer RPM mesmo não sendo alfabetizado?</span
-          >
-          <svg
-            id="arrow3"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            class="w-6 h-6 text-gray-400"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M19 9l-7 7-7-7"></path>
-          </svg>
-        </button>
-        <div
-          id="answer3"
-          style="display:none"
-          class="px-4 pb-5 sm:px-6 sm:pb-6"
-        >
-          <p>
-            Sem dúvida! Um professor de RPM avaliará o conhecimento prévio do
-            aluno durante as primeiras sessões e, se o aluno não tiver
-            conhecimentos fundamentais, o professor ensinará ao longo do
-            percurso através de lições do método RPM.
-          </p>
+      <div>
+        <div class="flex flex-row max-w-none">
+          <div class="flex justify-center">
+            <svg
+              class="rtl:mr-0 flex-shrink-0 h-6 mr-2 mt-1 rtl:ml-2 text-primary w-6"
+              height="1em"
+              viewBox="0 0 24 24"
+              width="1em"
+              data-icon="tabler:chevron-right"
+            >
+              <use xlink:href="#ai:tabler:chevron-right"></use>
+            </svg>
+          </div>
+          <div class="mt-0.5">
+            <h3 class="font-bold text-xl">E se eu não puder participar da aula ao vivo?</h3>
+            <p class="text-muted mt-3">
+              A gravação ficará disponível, mas recomendamos fortemente que esteja presente para aproveitar ao máximo!
+            </p>
+          </div>
         </div>
       </div>
-      <div
-        class="transition-all duration-200 bg-white border border-gray-200 shadow-lg cursor-pointer hover:bg-gray-50"
-      >
-        <button
-          type="button"
-          id="question4"
-          data-state="closed"
-          class="cursor-pointer flex items-center justify-between w-full px-4 py-5 sm:p-6"
-        >
-          <span class="flex text-lg font-semibold text-red-600"
-            >RPM é somente para profissionais?</span
-          >
-          <svg
-            id="arrow4"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            class="w-6 h-6 text-gray-400"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M19 9l-7 7-7-7"></path>
-          </svg>
-        </button>
-        <div
-          id="answer4"
-          style="display:none"
-          class="px-4 pb-5 sm:px-6 sm:pb-6"
-        >
-          <p>
-            Não, o RPM é para qualquer pessoa interessada na implementação do
-            método de ensino Soma®RPM, com seu filho/aluno, independente se
-            você for familiar, professor, atendente terapêutico, terapeuta
-            ocupacional, fonoaudiólogo.
-          </p>
+      <div>
+        <div class="flex flex-row max-w-none">
+          <div class="flex justify-center">
+            <svg
+              class="rtl:mr-0 flex-shrink-0 h-6 mr-2 mt-1 rtl:ml-2 text-primary w-6"
+              height="1em"
+              viewBox="0 0 24 24"
+              width="1em"
+              data-icon="tabler:chevron-right"
+            >
+              <use xlink:href="#ai:tabler:chevron-right"></use>
+            </svg>
+          </div>
+          <div class="mt-0.5">
+            <h3 class="font-bold text-xl">Posso participar mesmo sendo tímida?</h3>
+            <p class="text-muted mt-3">
+              Sim! O ambiente é seguro, respeitoso e acolhedor — você será ouvida e amada exatamente como é.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="flex flex-row max-w-none">
+          <div class="flex justify-center">
+            <svg
+              class="rtl:mr-0 flex-shrink-0 h-6 mr-2 mt-1 rtl:ml-2 text-primary w-6"
+              height="1em"
+              viewBox="0 0 24 24"
+              width="1em"
+              data-icon="tabler:chevron-right"
+            >
+              <use xlink:href="#ai:tabler:chevron-right"></use>
+            </svg>
+          </div>
+          <div class="mt-0.5">
+            <h3 class="font-bold text-xl">
+              Há algum certificado ao final da mentoria?
+            </h3>
+            <p class="text-muted mt-3">
+              Sim! Ao concluir a mentoria, você receberá um certificado de
+              participação.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="flex flex-row max-w-none">
+          <div class="flex justify-center">
+            <svg
+              class="rtl:mr-0 flex-shrink-0 h-6 mr-2 mt-1 rtl:ml-2 text-primary w-6"
+              height="1em"
+              viewBox="0 0 24 24"
+              width="1em"
+              data-icon="tabler:chevron-right"
+            >
+              <use xlink:href="#ai:tabler:chevron-right"></use>
+            </svg>
+          </div>
+          <div class="mt-0.5">
+            <h3 class="font-bold text-xl">Quais são as formas de pagamento?</h3>
+            <p class="text-muted mt-3">
+              Aceitamos pagamento via Pix, transferência bancária e boleto
+              parcelado.
+            </p>
+          </div>
         </div>
       </div>
     </div>
   </div>
+  <div
+    class="flex flex-row flex-nowrap gap-4 py-6 m-auto max-w-xs sm:flex-row sm:justify-center sm:max-w-md lg:justify-center"
+  >
+    <div class="flex w-full sm:w-auto">
+      <Link
+        class="btn-primary sm:mb-0 w-full"
+        href="https://chk.eduzz.com/89AQJ7P8WD"
+        label="Quero viver essa transformação"/>
+    </div>
+  </div>
 </section>
+
 
 <script>
   // JavaScript to toggle the answers and rotate the arrows
