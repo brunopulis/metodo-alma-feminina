@@ -1,0 +1,70 @@
+---
+import Link from "@/components/ui/Link.astro";
+
+const items = [
+  {
+    title: "Curar seus traumas",
+    description:
+      "Libertando-se das feridas emocionais que têm ofuscado seu brilho interior e impedido sua evolução espiritual.",
+    bgColor: "bg-accent-500",
+    textColor: "text-white",
+  },
+  {
+    title: "Governar suas emoções",
+    description:
+      "Assumindo o controle total de seus sentimentos, em vez de ser refém das tempestades emocionais.",
+    bgColor: "bg-accent-500",
+    textColor: "text-white",
+  },
+  {
+    title: "Descobrir seu propósito",
+    description:
+      "Encontrando sua missão sagrada, alinhada perfeitamente à vontade amorosa de Deus para sua vida.",
+    bgColor: "bg-accent-500",
+    textColor: "text-white",
+  },
+  {
+    title: "Ser fonte de inspiração",
+    description:
+      "Transformando sua vida e se tornando um farol de esperança e luz para outras mulheres.",
+    bgColor: "bg-accent-500",
+    textColor: "text-white",
+  },
+];
+---
+
+<section class="pb-16 bg-[#FDF8F5]" id="hero-inner">
+  <div class="container mx-auto">
+    <div class="max-w-8xl mx-auto p-9 md:p-8 mb-12">
+      <div class="mb-4">
+        <h2 class="text-4xl font-bold text-center">Você já se imaginou...</h2>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-4 sm:-cols-1 py-6 gap-8">
+        {
+          items.map((item, index) => (
+            <article
+              class={`overflow-hidden ${item.bgColor} hover:${item.textColor} slide-up shadow-md rounded-xl h-full`}
+            >
+              <div class="p-9">
+                <h3 class={`text-2xl font-bold mb-2.5 ${item.textColor}`}>
+                  {item.title}
+                </h3>
+                <p class={item.textColor === "text-white" ? "text-white" : "text-gray-600"}>
+                  {item.description}
+                </p>
+              </div>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+
+    <div class="text-center">
+      <Link
+        href="https://chk.eduzz.com/89AQJ7P8WD"
+        label="Vamos começar essa jornada juntas"
+      />
+    </div>
+  </div>
+</section>

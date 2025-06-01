@@ -1,5 +1,9 @@
 ---
+import { Image } from "astro:assets";
+
 import Link from "./ui/Link.astro"
+
+import women from "/public/assets/images/mulheres.jpg";
 ---
 
 <section class="py-16" id="step">
@@ -71,25 +75,14 @@ import Link from "./ui/Link.astro"
         </div>
       </div>
       <div class="relative md:basis-1/2">
-        <img
-          alt="Steps image"
-          src="https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80"
-          style="
-                  object-fit: cover;
-                  object-position: center;
-                  max-width: 100%;
-                  max-height: 100%;
-                "
-          class="inset-0 bg-gray-400 dark:bg-slate-700 md:absolute md:h-full object-cover object-top rounded-md shadow-lg w-full"
+        <Image
+          src={women}
+          alt="Silvana"
+          class="w-full object-cover object-center"
           decoding="async"
-          height="768"
           loading="lazy"
-          sizes="(max-width: 768px) 100vw, 432px"
-          srcset="
-                  https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80&h=711  400w,
-                  https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=768&q=80&h=1365 768w
-                "
-          width="432"
+          width={500}
+          height={500}
         />
       </div>
     </div>
