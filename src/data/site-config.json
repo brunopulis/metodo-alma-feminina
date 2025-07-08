@@ -1,6 +1,6 @@
 {
   "site": {
-    "name": "Alternativa Inclusiva",
+    "name": "Método Alma Feminina",
     "description": "Descubra como o RPM pode abrir caminhos reais para a aprendizagem, autonomia e expressão de pessoas autistas não falantes",
     "url": "https://alternativainclusiva.com.br",
     "baseUrl": "/",
@@ -8,11 +8,7 @@
     "defaultLanguage": "pt-BR",
     "themeColor": "#7e22ce"
   },
-  "social": {
-    "instagram": "https://instagram.com/rpm.brasil",
-    "facebook": "https://facebook.com/rpm.brasil",
-    "whatsapp": "https://wa.me/5511999999999"
-  },
+  "youtube": "https://youtu.be/0ERVq1G8H6g?si=MXsjdNRJhsZLfqpH",
   "book": {
     "title": "Comunicação e RPM",
     "subtitle": "Como você ensinaria alguém que não pode te responder com palavras?",
@@ -28,8 +24,8 @@
     }
   },
   "seo": {
-    "titleTemplate": "%s | Alternativa Inclusiva",
-    "defaultTitle": "Alternativa Inclusiva - RPM Brasil",
+    "titleTemplate": "%s | Método Alma Feminina",
+    "defaultTitle": "Método Alma Feminina - RPM Brasil",
     "defaultDescription": "Descubra como o RPM pode abrir caminhos reais para a aprendizagem, autonomia e expressão de pessoas autistas não falantes",
     "defaultImage": "/og-image.jpg",
     "keywords": [
@@ -41,12 +37,9 @@
     ]
   },
   "checkout": {
-    "url": "https://loja.infinitepay.io/alternativainclusiva/pec8887-livro---entenda-o-autismo-por-meio-do-rpm"
-  },
-  "sample": {
-    "url": "https://drive.google.com/file/d/1LrBIO_KpmsDmH5MFZAlSl_haO3KBuEi-/view"
+    "url": "https://chk.eduzz.com/89AQJ7P8WD"
   },
   "footer": {
-    "copyright": "© 2024 Alternativa Inclusiva. Todos os direitos reservados."
+    "copyright": "© 2025 Método Alma Feminina. Todos os direitos reservados."
   }
 }

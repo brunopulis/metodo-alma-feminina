@@ -1,8 +1,7 @@
 ---
-import { SEO } from 'astro-seo';
-
-import '../styles/global.css';
-import '../styles/transitions.css';
+import "@/styles/global.css";
+import "@/styles/styles.scss";
+import "@/styles/transitions.css";
 
 export interface Props {
   title: string;
@@ -15,7 +14,7 @@ const {
   title = "Entenda o Autismo por meio do Método RPM",
   description = "Um guia transformador sobre o ensino de pessoas autistas não falantes, baseado no método RPM. Ideal para pais, educadores e profissionais que acreditam no potencial de cada ser humano.",
   keywords = "livro sobre autismo, autismo não falante, método RPM, Rapid Prompting Method,Soma Mukhopadhyay,educação para autistas,ensino para autistas não verbais,livro físico autismo,presumir competência,comunicação alternativa autismo,autismo e aprendizagem,livro para pais de autistas,como ensinar autistas não falantes, educação inclusiva autismo, RPM Brasil",
-  author = "Renata Bonotto",
+  author = "Ludoana Barros e Silvana Pacheco",
 } = Astro.props;
 ---
 
@@ -32,12 +31,20 @@ const {
     <title>{title}</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
   </head>
-  <body class="flex min-h-full flex-col">
+  <body>
     <div id="page-wrapper">
       <slot />
     </div>
-    <script src="../scripts/transitions.js"></script>
+    <script src="@/scripts/transitions.js"></script>
   </body>
 </html>
+
+<style>
+  body {
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+</style>

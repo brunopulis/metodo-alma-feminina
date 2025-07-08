@@ -1,0 +1,84 @@
+---
+import config from "@/data/site-config.json";
+import Link from "@/components/ui/Link.astro";
+
+const items = [
+  {
+    title: "Curar seus traumas",
+    description:
+      "Libertando-se das feridas emocionais que têm ofuscado seu brilho interior e impedido sua evolução espiritual.",
+    bgColor: "bg-accent-500",
+    textColor: "text-white",
+  },
+  {
+    title: "Governar suas emoções",
+    description:
+      "Assumindo o controle total de seus sentimentos, em vez de ser refém das tempestades emocionais.",
+    bgColor: "bg-accent-500",
+    textColor: "text-white",
+  },
+  {
+    title: "Descobrir seu propósito",
+    description:
+      "Encontrando sua missão sagrada, alinhada perfeitamente à vontade amorosa de Deus para sua vida.",
+    bgColor: "bg-accent-500",
+    textColor: "text-white",
+  },
+  {
+    title: "Ser fonte de inspiração",
+    description:
+      "Transformando sua vida e se tornando um farol de esperança e luz para outras mulheres.",
+    bgColor: "bg-accent-500",
+    textColor: "text-white",
+  },
+];
+---
+
+<section class="pb-16 bg-[#FDF8F5]" id="hero-inner">
+  <div class="container">
+    <div class="row">
+      <h2 class="fw-bold text-center">Você já se imaginou...</h2>
+    </div>
+
+    <ul class="row">
+      {
+        items.map(item => (
+          <li
+            class="col-lg-3 slide-up rounded-xl h-100"
+          >
+            <article class="p-9">
+              <h3 class="">
+                {item.title}
+              </h3>
+              <p>
+                {item.description}
+              </p>
+            </article>
+          </li>
+        ))
+      }
+    </ul>
+
+    <div class="text-center">
+      <Link
+        href={config.checkout.url}
+        label="Vamos começar essa jornada juntas"
+      />
+    </div>
+  </div>
+</section>
+
+<style>
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+
+    @media (min-width: 1024px) {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    padding: 1.5rem 0;
+    gap: 2rem;
+  }
+  /* display: grid; grid-template-columns: repeat(1, minmax(0, 1fr));  */
+</style>

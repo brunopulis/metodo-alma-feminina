@@ -1,67 +1,242 @@
 ---
 import config from "@/data/site-config.json";
 
-import { BookText, CheckCircle, ArrowRight } from '@lucide/astro';
+import { BookText, CheckCircle, ArrowRight } from "@lucide/astro";
+
+import Link from "@/components/ui/Link.astro";
+
+const benefits = [
+  {
+    title: "30 aulas gravadas",
+    description:
+      " Conteúdos profundos para cura emocional e redescoberta da sua identidade.",
+  },
+  {
+    title: "30 devocionais diários",
+    description:
+      "Reflexões que vão iluminar sua jornada espiritual todos os dias.",
+  },
+  {
+    title: "1 aula presencial exclusiva (via Zoom)",
+    description:
+      "Conexão, partilha e fortalecimento da fé com outras mulheres.",
+  },
+];
 ---
 
-<section class="py-20 bg-white" id="benefits">
-  <div class="container mx-auto px-4">
-    <div class="max-w-5xl mx-auto">
-      <div class="flex items-center justify-center mb-12">
-        <div
-          class="w-16 h-16 rounded-full bg-gray-100 flex items-center justify-center mr-4"
-        >
-          <BookText class="w-8 h-8 text-red-500" />
+<section class="py-16 bg-[#FFF4F2]" id="benefits">
+  <div class="text-center md:mx-auto mb-8 md:mb-12 max-w-3xl">
+    <h2
+      class="font-bold leading-tighter font-heading tracking-tighter text-heading md:text-4xl text-3xl"
+    >
+      Benefícios da Mentoria
+    </h2>
+  </div>
+  <div class="mx-auto container gap-6 grid md:gap-y-12 sm:grid-cols-2">
+    <div>
+      <div class="flex flex-row max-w-md">
+        <div class="flex justify-center">
+          <svg
+            class="rtl:mr-0 mr-4 rtl:ml-4 bg-accent-500 h-10 md:h-12 md:p-3 md:w-12 p-2 rounded-full text-white w-10"
+            height="1em"
+            viewBox="0 0 24 24"
+            width="1em"
+            data-icon="tabler:checklist"
+          >
+            <symbol id="ai:tabler:checklist">
+              <path
+                d="M9.615 20H7a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8m-3 5l2 2l4-4M9 8h4m-4 4h2"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"></path>
+            </symbol>
+            <use xlink:href="#ai:tabler:checklist"></use>
+          </svg>
         </div>
-        <h2 class="text-3xl md:text-4xl font-bold text-red-500">
-          O que você vai descobrir
-        </h2>
-      </div>
-
-      <div class="bg-gray-50 rounded-2xl p-8 md:p-12 mb-12 shadow-sm">
-        <h3 class="text-2xl font-semibold mb-6 text-red-500">
-          Introdução ao Método
-        </h3>
-        <p class="text-lg mb-8 leading-relaxed">
-          Você vai entender o que é o Rapid Prompting Method (RPM), como ele é
-          aplicado na prática e por que vem transformando a vida de milhares de
-          pessoas com autismo ao redor do mundo.
-        </p>
-
-        <div class="space-y-5">
-          {
-            [
-              "Como ensinar autistas não falantes ou minimamente falantes com respeito e eficácia",
-              "Relatos reais de famílias e profissionais",
-              "A importância de presumir competência e inteligência",
-              "Estratégias para promover autonomia e aprendizado",
-            ].map((benefit) => (
-              <div class="flex items-start">
-                <CheckCircle class="w-6 h-6 text-green-600 mt-1 mr-3 flex-shrink-0" />
-                <p class="text-lg">{benefit}</p>
-              </div>
-            ))
-          }
-        </div>
-
-        <div
-          class="mt-10 p-6 border-l-4 border-red-500 bg-neutral-200 rounded-r-lg"
-        >
-          <p class="text-lg font-medium text-gray-800">
-            Este livro é um guia essencial para famílias, educadores e
-            terapeutas que desejam romper barreiras e enxergar o potencial por
-            trás do silêncio.
+        <div class="mt-0.5">
+          <h3 class="font-bold text-xl md:text-[1.3rem]">
+            Devocional Diário em Vídeo
+          </h3>
+          <p class="text-muted mt-3">
+            Reflexões profundas que alinham psicologia e espiritualidade, gerando transformação real.
           </p>
         </div>
-
-        <div class="mt-10 flex justify-center">
-          <a
-            href={config.checkout.url}
-            class="bg-red-600 hover:bg-transparent border-1 hover:border-red-500 text-white hover:text-red-500 font-bold py-4 px-8 rounded-lg flex items-center text-lg transition-all transform hover:scale-105 duration-300"
+      </div>
+    </div>
+    <div>
+      <div class="flex flex-row max-w-md">
+        <div class="flex justify-center">
+          <svg
+            class="rtl:mr-0 mr-4 rtl:ml-4 bg-accent-500 h-10 md:h-12 md:p-3 md:w-12 p-2 rounded-full text-white w-10"
+            height="1em"
+            viewBox="0 0 24 24"
+            width="1em"
+            data-icon="tabler:heart"
           >
-            Quero aprender o RPM!
-            <ArrowRight class="ml-2 w-5 h-5" />
-          </a>
+            <symbol id="ai:tabler:heart">
+              <path
+                d="M19.5 12.572L12 20l-7.5-7.428A5 5 0 1 1 12 6.006a5 5 0 1 1 7.5 6.572"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"></path>
+            </symbol>
+            <use xlink:href="#ai:tabler:heart"></use>
+          </svg>
+        </div>
+        <div class="mt-0.5">
+          <h3 class="font-bold text-xl md:text-[1.3rem]">
+            Material complementar em PDF
+          </h3>
+          <p class="text-muted mt-3">
+            Com espaço para <span lang="en">journaling</span>, perguntas de reflexão e práticas semanais.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="flex flex-row max-w-md">
+        <div class="flex justify-center">
+          <svg
+            class="rtl:mr-0 mr-4 rtl:ml-4 bg-accent-500 h-10 md:h-12 md:p-3 md:w-12 p-2 rounded-full text-white w-10"
+            height="1em"
+            viewBox="0 0 24 24"
+            width="1em"
+            data-icon="tabler:chalkboard"
+          >
+            <symbol id="ai:tabler:chalkboard">
+              <g
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              >
+                <path
+                  d="M8 19H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v11a1 1 0 0 1-1 1"
+                ></path>
+                <path
+                  d="M11 17a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1z"
+                ></path>
+              </g>
+            </symbol>
+            <use xlink:href="#ai:tabler:chalkboard"></use>
+          </svg>
+        </div>
+        <div class="mt-0.5">
+          <h3 class="font-bold text-xl md:text-[1.3rem]">
+            Comunidade exclusiva
+          </h3>
+          <p class="text-muted mt-3">
+            Uma rede de apoio e encorajamento, com um grupo de mulheres com o mesmo propósito.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="flex flex-row max-w-md">
+        <div class="flex justify-center">
+          <svg
+            class="rtl:mr-0 mr-4 rtl:ml-4 bg-accent-500 h-10 md:h-12 md:p-3 md:w-12 p-2 rounded-full text-white w-10"
+            height="1em"
+            viewBox="0 0 24 24"
+            width="1em"
+            data-icon="tabler:books"
+          >
+            <symbol id="ai:tabler:books">
+              <g
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              >
+                <path
+                  d="M5 5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1zm4 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1zM5 8h4m0 8h4"
+                ></path>
+                <path
+                  d="m13.803 4.56l2.184-.53c.562-.135 1.133.19 1.282.732l3.695 13.418a1.02 1.02 0 0 1-.634 1.219l-.133.041l-2.184.53c-.562.135-1.133-.19-1.282-.732L13.036 5.82a1.02 1.02 0 0 1 .634-1.219zM14 9l4-1m-2 8l3.923-.98"
+                ></path>
+              </g>
+            </symbol>
+            <use xlink:href="#ai:tabler:books"></use>
+          </svg>
+        </div>
+        <div class="mt-0.5">
+          <h3 class="font-bold text-xl md:text-[1.3rem]">
+            Acompanhamento próximo
+          </h3>
+          <p class="text-muted mt-3">
+            Encontros ao vivo e gravações disponíveis, para você desfrutar da sua transformação.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="flex flex-row max-w-md">
+        <div class="flex justify-center">
+          <svg
+            class="rtl:mr-0 mr-4 rtl:ml-4 bg-accent-500 h-10 md:h-12 md:p-3 md:w-12 p-2 rounded-full text-white w-10 icon icon-tabler icons-tabler-outline icon-tabler-brand-whatsapp"
+            height="1em"
+            viewBox="0 0 24 24"
+            width="1em"
+            data-icon="tabler:brand-whatsapp"
+          >
+            <path
+              stroke="#fff"
+              fill="none"
+              d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9"></path>
+            <path
+              fill="#fff"
+              stroke="none"
+              d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1"
+            ></path>
+          </svg>
+        </div>
+        <div class="mt-0.5">
+          <h3 class="font-bold text-xl md:text-[1.3rem]">Exercícios terapêuticos</h3>
+          <p class="text-muted mt-3">
+            Exercícios baseados na Logoterapia e na Terapia Cognitivo-Comportamental.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="flex flex-row max-w-md">
+        <div class="flex justify-center">
+          <svg
+            class="rtl:mr-0 mr-4 rtl:ml-4 bg-accent-500 h-10 md:h-12 md:p-3 md:w-12 p-2 rounded-full text-white w-10"
+            height="1em"
+            viewBox="0 0 24 24"
+            width="1em"
+            data-icon="tabler:certificate"
+          >
+            <symbol id="ai:tabler:certificate">
+              <g
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              >
+                <path d="M12 15a3 3 0 1 0 6 0a3 3 0 1 0-6 0"></path>
+                <path d="M13 17.5V22l2-1.5l2 1.5v-4.5"></path>
+                <path
+                  d="M10 19H5a2 2 0 0 1-2-2V7c0-1.1.9-2 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-1 1.73M6 9h12M6 12h3m-3 3h2"
+                ></path>
+              </g>
+            </symbol>
+            <use xlink:href="#ai:tabler:certificate"></use>
+          </svg>
+        </div>
+        <div class="mt-0.5">
+          <h3 class="font-bold text-xl md:text-[1.3rem]">Aprofundamento teológico</h3>
+          <p class="text-muted mt-3">
+            Estudos práticos e acessíveis para a vida emocional da mulher cristã.
+          </p>
         </div>
       </div>
     </div>

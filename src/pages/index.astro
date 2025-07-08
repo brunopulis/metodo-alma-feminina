@@ -1,35 +1,35 @@
 ---
-import Layout from '@/layouts/Layout.astro';
+import Layout from "@/layouts/Layout.astro";
 
 // Components
-import Benefits from '@/components/Benefits.astro';
-import Footer from '@/components/Footer.astro';
-import Author from '@/components/Author.astro';
-import About from '@/components/About.astro';
-import FAQ from '@/components/FAQ.astro';
-import Translators from '@/components/Translators.astro';
-import FreeSample from '@/components/FreeSample.astro';
-import FinalCTA from '@/components/FinalCTA.astro';
-import Hero from '@/components/Hero.astro';
-import Testimonials from '@/components/Testimonials.astro';
+import Hero from "@/components/Hero.astro";
+import HeroInner from "@/components/HeroInner.astro";
+import HowWorks from "@/components/HowWorks.astro";
+import Benefits from "@/components/Benefits.astro";
+import Steps from "@/components/Steps.astro";
+import Mentor from "@/components/Mentor.astro";
+import Testimonials from "@/components/Testimonials.astro";
+import FAQ from "@/components/FAQ.astro";
+import FinalCTA from "@/components/FinalCTA.astro";
+import Footer from "@/components/Footer.astro";
 
 // Third-party components
-import { SkipLink } from 'accessible-astro-components'
+import { SkipLink } from "accessible-astro-components";
 ---
 
-<Layout title="Alternativa Inclusiva" description="Bruno Pulis - Engenheiro de Software, desenvolvedor front-end e back-end, especialista em JavaScript, TypeScript, React, Node.js e muito mais.">
+<Layout title="Método Alma Feminina" description="Bruno Pulis - Engenheiro de Software, desenvolvedor front-end e back-end, especialista em JavaScript, TypeScript, React, Node.js e muito mais.">
   <header>
     <SkipLink text="Ir para conteúdo principal" target="main-content" />
   </header>
   <Hero />
   <main id="main-content">
+    <HeroInner />
+    <HowWorks />
     <Benefits />
+    <Steps />
+    <Mentor />
     <Testimonials />
-    <Author />
-    <About />
-    <Translators />
     <FAQ />
-    <FreeSample />
     <FinalCTA />
   </main>
   <Footer />
