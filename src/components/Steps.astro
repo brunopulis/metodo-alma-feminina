@@ -6,75 +6,34 @@ import Link from "./ui/Link.astro"
 import women from "/public/assets/images/mulheres.jpg";
 ---
 
-<section class="py-16" id="step">
-  <div
-    class="relative mx-auto px-4 lg:py-20 md:px-6 md:py-16 py-12 text-default container-custom"
-  >
-    <div class="flex flex-col md:flex-row gap-8 md:gap-12">
-      <div class="md:basis-1/2 md:py-4 md:self-center">
-        <div class="md:mx-auto mb-8 md:mb-12 rtl:text-right text-left">
-          <h2
-            class="font-bold leading-tighter font-heading tracking-tighter text-heading text-3xl lg:text-4xl"
-          >
-            Para quem é a mentoria?
-          </h2>
-        </div>
-        <div class="">
-          <div class="flex">
-            <div class="flex items-center flex-col mr-4 rtl:ml-4 rtl:mr-0">
-              <div>
-                <div class="flex justify-center items-center">
-                  <svg
-                    class="rounded-full h-10 p-2 w-10 border-2 border-primary dark:border-blue-700 dark:text-slate-200 text-primary"
-                    height="1em"
-                    viewBox="0 0 24 24"
-                    width="1em"
-                    data-icon="tabler:code"
-                  >
-                    <use xlink:href="#ai:tabler:code"></use>
-                  </svg>
-                </div>
-              </div>
-              <div class="bg-black/10 dark:bg-slate-400/50 h-full w-px"></div>
-            </div>
-            <div class="pt-1 pb-8">
-              <p class="font-bold text-xl">
-                Profissionais <span lang="en">front-end</span>
-              </p>
-              <p class="text-muted mt-2">
-                Que desejam conhecer ou ampliar seus conhecimentos em
-                acessibilidade digitial
-              </p>
-            </div>
-          </div>
-          <div class="flex">
-            <div class="flex items-center flex-col mr-4 rtl:ml-4 rtl:mr-0">
-              <div>
-                <div class="flex justify-center items-center">
-                  <svg
-                    class="rounded-full h-10 p-2 w-10 border-2 border-primary dark:border-blue-700 dark:text-slate-200 text-primary"
-                    height="1em"
-                    viewBox="0 0 24 24"
-                    width="1em"
-                    data-icon="tabler:bug"
-                  >
-                    <use xlink:href="#ai:tabler:bug"></use>
-                  </svg>
-                </div>
-              </div>
-              <div class="bg-black/10 dark:bg-slate-400/50 h-full w-px"></div>
-            </div>
-            <div class="pt-1 pb-8">
-              <p class="font-bold text-xl">Analistas de Qualidade (QA)</p>
-              <p class="text-muted mt-2">
-                Que desejam conhecer os testes de acessibilidade para aumentar
-                seu repertório de testes.
-              </p>
-            </div>
-          </div>
-        </div>
+<section id="step">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <h2 class="fw-bold display-5">Para quem é a mentoria?</h2>
+        <p class="lead">Para mulheres cristãs que:</p>
+
+        <ul class="list-unstyled">
+          <li>
+            <p>
+              <strong>Carregam feridas do passado</strong> que impedem seus passos rumo ao futuro que Deus preparou;
+            </p>
+          </li>
+          <li>
+            <p><strong>Sentem um vazio inexplicável</strong> mesmo cercadas de pessoas e responsabilidades;</p>
+          </li>
+          <li>
+            <p><strong>Anseiam por autoconhecimento verdadeiro</strong> e cura emocional que perdure;</p>
+          </li>
+          <li>
+            <p><strong>Desejam integrar fé e sabedoria</strong> para viver com autenticidade e propósito;</p>
+          </li>
+          <li>
+            <p><strong>Buscam uma transformação completa</strong>  que vai além de soluções superficiais.</p>
+          </li>
+        </ul>
       </div>
-      <div class="relative md:basis-1/2">
+      <div class="col-lg-6">
         <Image
           src={women}
           alt="Silvana"

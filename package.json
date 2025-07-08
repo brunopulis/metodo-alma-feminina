@@ -7,22 +7,33 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro build && astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "format": "prettier --write --plugin=prettier-plugin-astro .",
+    "lint:scss": "stylelint 'src/**/*.{astro,scss}'",
+    "prettier:check": "prettier --check --plugin=prettier-plugin-astro ."
   },
   "dependencies": {
     "@astrojs/alpinejs": "^0.4.8",
-    "@astrojs/rss": "^4.0.11",
-    "@astrojs/sitemap": "^3.4.0",
+    "@astrojs/rss": "^4.0.12",
+    "@astrojs/sitemap": "^3.4.1",
     "@lucide/astro": "^0.511.0",
     "@tailwindcss/vite": "^4.1.3",
     "accessible-astro-components": "^4.1.1",
     "alpinejs": "^3.14.9",
-    "astro": "^5.7.14",
+    "astro": "^5.11.0",
     "astro-embed": "^0.9.0",
     "astro-google-analytics": "^1.0.3",
     "astro-robots-txt": "^1.0.0",
+    "bootstrap": "^5.3.7",
     "sharp": "^0.34.2",
     "tailwindcss": "^4.1.7"
   },
-  "packageManager": "pnpm@10.11.0"
+  "packageManager": "pnpm@10.11.0",
+  "devDependencies": {
+    "@types/bootstrap": "^5.2.10",
+    "sass": "^1.89.2",
+    "stylelint": "^16.21.1",
+    "stylelint-config-recommended-scss": "^15.0.1",
+    "stylelint-config-standard": "^38.0.0"
+  }
 }

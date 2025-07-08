@@ -2,125 +2,104 @@
 import { Image } from "astro:assets";
 import Link from "@/components/ui/Link.astro";
 
-import silvana from  "/public/assets/images/1.png";
+import silvana from "/public/assets/images/1.png";
 import ludoana from "/public/assets/images/2.png";
 ---
 
 <section class="py-16 bg-[#FDF8F5]" id="about">
-  <div
-    class="mx-auto px-4 lg:py-20 md:px-6 md:py-16 py-12 text-default max-w-7xl"
-  >
-    <div
-      class="text-center md:mx-auto mb-8 md:mb-12 lg:max-w-2xl max-w-xl sm:mx-auto"
-    >
-      <p
-        class="font-bold dark:text-blue-200uppercase"
-      >
-        Conheça suas mentoras
-      </p>
-      <h2
-        class="font-bold leading-tighter leading-tighter font-heading tracking-tighter text-heading mb-4 text-4xl md:text-5xl"
-      >
-        Quem serão suas mentoras?
-      </h2>
+  <div class="container">
+    <div class="row text-center mb-4">
+      <p class="fw-bold text-uppercase">Conheça suas mentoras</p>
+      <h2 class="fw-bold display-5">Quem serão suas mentoras?</h2>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
+
+    <div class="row">
       <!-- Team Member 1 -->
-      <div class="group">
-        <div class="relative overflow-hidden rounded-xl mb-4">
+      <div class="col-lg-6">
+        <div class="card h-100">
           <Image
             src={silvana}
             alt="Silvana"
-            class="w-full object-cover object-center"
+            class="card-img-top"
             decoding="async"
             loading="lazy"
             width={500}
             height={500}
           />
-        </div>
 
-        <div class="bg-white p-6">	
-          <h3 class="text-xl text-center font-bold text-gray-800">Pr. Silvana</h3>
-          <p class="text-accent-500 text-center font-medium">CEO & Founder</p>
-          <p class="text-gray-600 mt-2">
-            Formada em Psicologia desde 2007, com Mestrado em Psicologia Clínica, Especialização em Logoterapia e Análise Existencial e Formação em Terapia Cognitivo Comportamental.
-          </p>
-          <p class="text-gray-600 mt-2">
-            É apaixonada por ajudar mulheres a se tornarem a melhor versão de si mesmas, superando desafios e alcançando seus objetivos.
-          </p>
+          <div class="card-body">
+            <h3 class="card-title text-center">Pr<sup>a</sup>. Silvana</h3>
+            <p class="text-accent-500 text-center font-medium">
+              Pastora e teológa
+            </p>
+            <p class="card-text mt-2">
+              Formada em Psicologia desde 2007, com Mestrado em Psicologia
+              Clínica, Especialização em Logoterapia e Análise Existencial e
+              Formação em Terapia Cognitivo Comportamental.
+            </p>
+            <p class="text-gray-600 mt-2">
+              É apaixonada por ajudar mulheres a se tornarem a melhor versão de
+              si mesmas, superando desafios e alcançando seus objetivos.
+            </p>
+          </div>
         </div>
       </div>
 
       <!-- Team Member 2 -->
-      <div class="group">
-        <div class="relative overflow-hidden rounded-xl mb-4">
+      <div class="col-lg-6">
+        <div class="card h-100">
           <Image
             src={ludoana}
             alt="Silvana"
-            class="w-full object-cover object-center"
+            class="card-img-top"
             decoding="async"
             loading="lazy"
             width={500}
             height={500}
           />
-          <div
-            class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center p-6"
-          >
-            <div class="flex space-x-4">
-              <a
-                href="#"
-                class="bg-white text-indigo-600 p-2 rounded-full hover:bg-indigo-600 hover:text-white transition-colors duration-200"
-              >
-                <i class="fab fa-linkedin-in"></i>
-              </a>
-              <a
-                href="#"
-                class="bg-white text-indigo-600 p-2 rounded-full hover:bg-indigo-600 hover:text-white transition-colors duration-200"
-              >
-                <i class="fab fa-twitter"></i>
-              </a>
-              <a
-                href="#"
-                class="bg-white text-indigo-600 p-2 rounded-full hover:bg-indigo-600 hover:text-white transition-colors duration-200"
-              >
-                <i class="fas fa-envelope"></i>
-              </a>
-            </div>
+          <div class="card-body">
+            <h3 class="text-xl font-bold text-center text-gray-800">
+              Ludoana Barros
+            </h3>
+            <p class="text-accent-500 text-center font-medium">Psicóloga</p>
+            <p class="card-text mt-2">
+              Formada em Psicologia desde 2007, com Mestrado em Psicologia
+              Clínica, Especialização em Logoterapia e Análise Existencial e
+              Formação em Terapia Cognitivo Comportamental.
+            </p>
+            <p class="card-text mt-2">
+              É apaixonada por ajudar mulheres a se tornarem a melhor versão de
+              si mesmas, superando desafios e alcançando seus objetivos.
+            </p>
           </div>
-        </div>
-        <div>
-          <h3 class="text-xl font-bold text-center text-gray-800">Ludoana Barros</h3>
-          <p class="text-accent-500 text-center font-medium">Psicóloga</p>
-          <p class="text-gray-600 mt-2">
-            Formada em Psicologia desde 2007, com Mestrado em Psicologia Clínica, Especialização em Logoterapia e Análise Existencial e Formação em Terapia Cognitivo Comportamental.
-          </p>
-          <p class="text-gray-600 mt-2">
-            É apaixonada por ajudar mulheres a se tornarem a melhor versão de si mesmas, superando desafios e alcançando seus objetivos.
-          </p>
+
+          <div></div>
         </div>
       </div>
     </div>
 
-    <div class="mt-12 text-center">
-      <p class="text-gray-600">
-        Juntas, Silvana e Ludoana trazem uma combinação única de experiência e
-        paixão para ajudar você a alcançar seus objetivos.
-      </p>
-      <p class="text-gray-600 mt-4">
-        Elas estão aqui para guiar você em cada passo do caminho, oferecendo
-        suporte personalizado e insights valiosos.
-      </p>
-      <p class="text-gray-600 mt-4">
-        Não perca a oportunidade de aprender com essas mentoras incríveis e
-        transformar sua jornada de aprendizado!
-      </p>
-    </div>
+    <div class="row mt-6">
+      <div class="mt-12 text-center">
+        <p class="text-gray-600">
+          Juntas, Silvana e Ludoana trazem uma combinação única de experiência e
+          paixão para ajudar você a alcançar seus objetivos.
+        </p>
+        <p class="text-gray-600 mt-4">
+          Elas estão aqui para guiar você em cada passo do caminho, oferecendo
+          suporte personalizado e insights valiosos.
+        </p>
+        <p class="text-gray-600 mt-4">
+          Não perca a oportunidade de aprender com essas mentoras incríveis e
+          transformar sua jornada de aprendizado!
+        </p>
+      </div>
 
-    <div class="mt-10 flex justify-center">
-      <Link
-        href="https://chk.eduzz.com/89AQJ7P8WD"
-        label="Quero vive essa transformação"
-      />
+      <div class="mt-10 flex justify-center">
+        <Link
+          href="https://chk.eduzz.com/89AQJ7P8WD"
+          label="Quero vive essa transformação"
+        />
+      </div>
     </div>
   </div>
 </section>

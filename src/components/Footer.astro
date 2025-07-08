@@ -1,5 +1,7 @@
 ---
-import { BookOpen, Instagram, Mail, Heart } from "@lucide/astro";
+import config from "@/data/site-config.json";
+
+import { Heart } from "@lucide/astro";
 
 const currentYear = new Date().getFullYear();
 ---
@@ -7,6 +9,7 @@ const currentYear = new Date().getFullYear();
 <footer class="relative py-6 bg-accent-500 ">
   <div class="text-center">
     <p class="flex items-center justify-center text-white text-sm">
+      {config.footer.copyright}
       Feito com <Heart class="w-4 h-4 mx-1 text-white" /> por
       <a
         rel="noopener"

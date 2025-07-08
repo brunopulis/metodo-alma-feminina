@@ -1,0 +1,35 @@
+  .hero {
+    background: #fdf8f5;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .hero__title {
+    font-size: 1.875rem;
+    font-weight: 700;
+    @media (min-width: 768px) {
+      font-size: 3rem;
+    }
+
+    @media (min-width: 1024px) {
+      font-size: 4rem;
+    }
+
+    margin-bottom: 1.5rem;
+  }
+
+  .hero p {
+    font-size: 1.25rem;
+    @media (min-width: 768px) {
+      font-size: 1.5rem;
+    }
+  }
+
+  .hero__wrapper {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 72rem;
+    text-align: center;
+  }

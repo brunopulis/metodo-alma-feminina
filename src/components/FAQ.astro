@@ -2,26 +2,19 @@
 import Link from "@/components/ui/Link.astro";
 ---
 
-<section class="relative not-prose scroll-mt-[72px]" id="faq">
-  <div class="inset-0 absolute pointer-events-none -z-[1]" aria-hidden="true">
-    <div class="inset-0 absolute"></div>
-  </div>
-  <div
-    class="relative mx-auto px-4 lg:py-20 md:px-6 md:py-10 py-10 text-default max-w-6xl"
-  >
-    <div class="text-center md:mx-auto mb-8 md:mb-12 max-w-3xl">
-      <h2
-        class="font-bold leading-tighter font-heading tracking-tighter text-heading md:text-4xl text-3xl"
-      >
-        Perguntas Frequentes
-      </h2>
+<section id="faq">
+  <div class="container">
+    <div class="row text-center mb-6">
+      <div class="col-lg-8 mx-auto">
+        <h2>Perguntas Frequentes</h2>
+      </div>
     </div>
-    <div class="mx-auto gap-8 grid md:gap-y-12 sm:grid-cols-2 gap-y-8">
-      <div>
+    <div class="row">
+      <div class="col-lg-6">
         <div class="flex flex-row max-w-none">
           <div class="flex justify-center">
             <svg
-              class="rtl:mr-0 flex-shrink-0 h-6 mr-2 mt-1 rtl:ml-2 text-primary w-6"
+              class="rtl:mr-0 flex-shrink-0 h-6 mr-2 mt-1 rtl:ml-2 text-secondary w-6"
               height="1em"
               viewBox="0 0 24 24"
               width="1em"
@@ -40,18 +33,18 @@ import Link from "@/components/ui/Link.astro";
             </svg>
           </div>
           <div class="mt-0.5">
-            <h3 class="font-bold text-xl">Preciso ter conhecimento da Bíblia para participar?</h3>
+            <h3>Preciso ter conhecimento da Bíblia para participar?</h3>
             <p class="text-muted mt-3">
               Não. A mentoria é para todas — do começo da caminhada até quem já tem intimidade com a Palavra.
             </p>
           </div>
         </div>
       </div>
-      <div>
+      <div class="col-lg-6">
         <div class="flex flex-row max-w-none">
           <div class="flex justify-center">
             <svg
-              class="rtl:mr-0 flex-shrink-0 h-6 mr-2 mt-1 rtl:ml-2 text-primary w-6"
+              class="rtl:mr-0 flex-shrink-0 h-6 mr-2 mt-1 rtl:ml-2 text-secondary w-6"
               height="1em"
               viewBox="0 0 24 24"
               width="1em"
@@ -61,18 +54,18 @@ import Link from "@/components/ui/Link.astro";
             </svg>
           </div>
           <div class="mt-0.5">
-            <h3 class="font-bold text-xl">Como acesso as aulas?</h3>
+            <h3>Como acesso as aulas?</h3>
             <p class="text-muted mt-3">
               Você receberá login para uma plataforma online onde poderá assistir às aulas no seu ritmo.
             </p>
           </div>
         </div>
       </div>
-      <div>
+      <div class="col-lg-6">
         <div class="flex flex-row max-w-none">
           <div class="flex justify-center">
             <svg
-              class="rtl:mr-0 flex-shrink-0 h-6 mr-2 mt-1 rtl:ml-2 text-primary w-6"
+              class="rtl:mr-0 flex-shrink-0 h-6 mr-2 mt-1 rtl:ml-2 text-secondary w-6"
               height="1em"
               viewBox="0 0 24 24"
               width="1em"
@@ -82,18 +75,18 @@ import Link from "@/components/ui/Link.astro";
             </svg>
           </div>
           <div class="mt-0.5">
-            <h3 class="font-bold text-xl">E se eu não puder participar da aula ao vivo?</h3>
+            <h3>E se eu não puder participar da aula ao vivo?</h3>
             <p class="text-muted mt-3">
               A gravação ficará disponível, mas recomendamos fortemente que esteja presente para aproveitar ao máximo!
             </p>
           </div>
         </div>
       </div>
-      <div>
+      <div class="col-lg-6">
         <div class="flex flex-row max-w-none">
           <div class="flex justify-center">
             <svg
-              class="rtl:mr-0 flex-shrink-0 h-6 mr-2 mt-1 rtl:ml-2 text-primary w-6"
+              class="rtl:mr-0 flex-shrink-0 h-6 mr-2 mt-1 rtl:ml-2 text-secondary w-6"
               height="1em"
               viewBox="0 0 24 24"
               width="1em"
@@ -103,18 +96,18 @@ import Link from "@/components/ui/Link.astro";
             </svg>
           </div>
           <div class="mt-0.5">
-            <h3 class="font-bold text-xl">Posso participar mesmo sendo tímida?</h3>
+            <h3>Posso participar mesmo sendo tímida?</h3>
             <p class="text-muted mt-3">
               Sim! O ambiente é seguro, respeitoso e acolhedor — você será ouvida e amada exatamente como é.
             </p>
           </div>
         </div>
       </div>
-      <div>
+      <div class="col-lg-6">
         <div class="flex flex-row max-w-none">
           <div class="flex justify-center">
             <svg
-              class="rtl:mr-0 flex-shrink-0 h-6 mr-2 mt-1 rtl:ml-2 text-primary w-6"
+              class="rtl:mr-0 flex-shrink-0 h-6 mr-2 mt-1 rtl:ml-2 text-secondary w-6"
               height="1em"
               viewBox="0 0 24 24"
               width="1em"
@@ -124,7 +117,7 @@ import Link from "@/components/ui/Link.astro";
             </svg>
           </div>
           <div class="mt-0.5">
-            <h3 class="font-bold text-xl">
+            <h3>
               Há algum certificado ao final da mentoria?
             </h3>
             <p class="text-muted mt-3">
@@ -134,11 +127,11 @@ import Link from "@/components/ui/Link.astro";
           </div>
         </div>
       </div>
-      <div>
+      <div class="col-lg-6">
         <div class="flex flex-row max-w-none">
           <div class="flex justify-center">
             <svg
-              class="rtl:mr-0 flex-shrink-0 h-6 mr-2 mt-1 rtl:ml-2 text-primary w-6"
+              class="rtl:mr-0 flex-shrink-0 h-6 mr-2 mt-1 rtl:ml-2 text-secondary w-6"
               height="1em"
               viewBox="0 0 24 24"
               width="1em"
@@ -148,7 +141,7 @@ import Link from "@/components/ui/Link.astro";
             </svg>
           </div>
           <div class="mt-0.5">
-            <h3 class="font-bold text-xl">Quais são as formas de pagamento?</h3>
+            <h3>Quais são as formas de pagamento?</h3>
             <p class="text-muted mt-3">
               Aceitamos pagamento via Pix, transferência bancária e boleto
               parcelado.
@@ -163,7 +156,7 @@ import Link from "@/components/ui/Link.astro";
   >
     <div class="flex w-full sm:w-auto">
       <Link
-        class="btn-primary sm:mb-0 w-full"
+        class="btn-secondary sm:mb-0 w-full"
         href="https://chk.eduzz.com/89AQJ7P8WD"
         label="Quero viver essa transformação"/>
     </div>
@@ -171,22 +164,4 @@ import Link from "@/components/ui/Link.astro";
 </section>
 
 
-<script>
-  // JavaScript to toggle the answers and rotate the arrows
-  document
-    .querySelectorAll('[id^="question"]')
-    .forEach(function (button, index) {
-      button.addEventListener("click", function () {
-        var answer = document.getElementById("answer" + (index + 1));
-        var arrow = document.getElementById("arrow" + (index + 1));
 
-        if (answer.style.display === "none" || answer.style.display === "") {
-          answer.style.display = "block";
-          arrow.style.transform = "rotate(0deg)";
-        } else {
-          answer.style.display = "none";
-          arrow.style.transform = "rotate(-180deg)";
-        }
-      });
-    });
-</script>

@@ -1,8 +1,7 @@
 ---
-import { SEO } from 'astro-seo';
-
-import '../styles/global.css';
-import '../styles/transitions.css';
+import "@/styles/global.css";
+import "@/styles/styles.scss";
+import "@/styles/transitions.css";
 
 export interface Props {
   title: string;
@@ -34,10 +33,18 @@ const {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
   </head>
-  <body class="flex min-h-full flex-col">
+  <body>
     <div id="page-wrapper">
       <slot />
     </div>
-    <script src="../scripts/transitions.js"></script>
+    <script src="@/scripts/transitions.js"></script>
   </body>
 </html>
+
+<style>
+  body {
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+</style>

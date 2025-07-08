@@ -1,38 +1,60 @@
 ---
-import { Image } from "astro:assets";
-import { YouTube } from 'astro-embed';
-
-import heroImage from "/public/assets/images/hero-2.jpg";
+import config from "@/data/site-config.json";
+import "@/styles/styles.scss";
+import Link from "@/components/ui/Link.astro";
+import { YouTube } from "astro-embed";
 ---
 
-<section class="hero-section py-16 px-4 bg-[#FDF8F5]">
-  <div class="max-w-5xl mx-auto">
-    <div class="animate-fade-in-down">
-      <div class="text-center mb-8">
-        <h1
-          class="text-5xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
-        >
-          Cure as feridas da alma e assuma o controle de suas emoções
-        </h1>
-
-        <!-- <Image
-          src={heroImage}
-          alt="Hero Image"
-          class="w-full h-auto rounded-lg shadow-lg mb-6"
-          decoding="async"
-          loading="lazy"
-          width={800}
-          height={600}
-        /> -->
-        <YouTube class="mx-auto py-5 aspect-video h-full mb-5" id="https://youtu.be/xtTy5nKay_Y" />
-
-        <p class="text-xl md:text-2xl">
-          Liberte-se das cadeias emocionais e desperte seu verdadeiro propósito
-        </p>
-        <p class="text-xl md:text-2xl">
-          Pronta para uma transformação profunda e significativa?
-        </p>
+<section class="hero">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <span class="tag">Método Alma Feminina</span>
+        <h2 class="hero__title fw-bold display-4">
+          Cure suas feridas e assuma suas emoções
+        </h2>
+        <div class="animate-fade-in-down">
+          <p class="lead">
+            Liberte-se das cadeias emocionais e desperte seu verdadeiro
+            propósito
+          </p>
+          <p class="lead">Pronta para uma transformação profunda e significativa?</p>
+          <div class="mt-5">
+            <Link
+              href={config.checkout.url}
+              label="Vamos começar essa jornada juntas"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="ratio ratio-16x9 mb-5">
+          <div>
+            <YouTube
+              class="hero__video mx-auto py-5 aspect-video h-full mb-5"
+              id={config.youtube}
+            />
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
+
+<style lang="scss">
+  $color: #c58fa6;
+  // d-inline-flex mb-3 px-2 py-1 fw-semibold text-success-emphasis bg-success-subtle border border-success-subtle rounded-2
+  .tag {
+    display: inline-flex;
+    background: $color;
+    border-radius: 0.375rem;
+    padding: 4px 8px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 1rem;
+  }
+
+  .hero {
+    background: #fff4f2;
+  }
+</style>
