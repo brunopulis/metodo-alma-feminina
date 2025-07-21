@@ -4,25 +4,11 @@
     "description": "Descubra como o RPM pode abrir caminhos reais para a aprendizagem, autonomia e expressão de pessoas autistas não falantes",
     "url": "https://alternativainclusiva.com.br",
     "baseUrl": "/",
-    "author": "Fabiani Malheiros Eggers",
+    "author": "Bruno Pulis",
     "defaultLanguage": "pt-BR",
-    "themeColor": "#7e22ce"
+    "themeColor": "#8a4f73"
   },
   "youtube": "https://youtu.be/0ERVq1G8H6g?si=MXsjdNRJhsZLfqpH",
-  "book": {
-    "title": "Comunicação e RPM",
-    "subtitle": "Como você ensinaria alguém que não pode te responder com palavras?",
-    "price": {
-      "amount": 97.00,
-      "currency": "BRL"
-    },
-    "cta": {
-      "primary": {
-        "text": "Garanta seu exemplar agora",
-        "href": "#"
-      }
-    }
-  },
   "seo": {
     "titleTemplate": "%s | Método Alma Feminina",
     "defaultTitle": "Método Alma Feminina - RPM Brasil",

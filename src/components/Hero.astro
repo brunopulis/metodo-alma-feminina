@@ -1,40 +1,55 @@
 ---
 import config from "@/data/site-config.json";
 import "@/styles/styles.scss";
-import Link from "@/components/ui/Link.astro";
+import Button from "@/components/ui/Button.astro";
 import { YouTube } from "astro-embed";
 ---
 
-<section class="hero">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-6">
-        <span class="tag">Método Alma Feminina</span>
-        <h2 class="hero__title fw-bold display-4">
+<section class="py-16 bg-[#fff4f2]">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col lg:flex-row items-center gap-10">
+      <!-- Left Column -->
+      <div class="w-full lg:w-1/2">
+        <span class="inline-block bg-accent-800 text-white text-sm font-semibold px-3 py-1 rounded mb-4">
+          Método Alma Feminina
+        </span>
+        <h2 class="text-4xl font-bold tracking-tight text-gray-900 mb-6">
           Cure suas feridas e assuma suas emoções
         </h2>
-        <div class="animate-fade-in-down">
-          <p class="lead">
-            Liberte-se das cadeias emocionais e desperte seu verdadeiro
-            propósito
+        <div class="space-y-4 animate-fade-in-down delay-100">
+          <p class="text-lg text-gray-700">
+            Liberte-se das cadeias emocionais e desperte seu verdadeiro propósito
           </p>
-          <p class="lead">Pronta para uma transformação profunda e significativa?</p>
-          <div class="mt-5">
-            <Link
-              href={config.checkout.url}
-              label="Vamos começar essa jornada juntas"
-            />
-          </div>
+          <p class="text-lg text-gray-700">
+            Pronta para uma transformação profunda e significativa?
+          </p>
+        </div>
+        <div class="mt-6">
+          <Button
+            href={config.checkout.url}
+            label="Começar minha jornada"
+          />
         </div>
       </div>
-      <div class="col-lg-6">
-        <div class="ratio ratio-16x9 mb-5">
-          <div>
-            <YouTube
-              class="hero__video mx-auto py-5 aspect-video h-full mb-5"
-              id={config.youtube}
-            />
-          </div>
+
+      <!-- Right Column -->
+      <div class="w-full lg:w-1/2">
+        <div class="aspect-video mb-5">
+          <YouTube
+            class="w-full h-full rounded-lg shadow-lg"
+            id={config.youtube}
+            style="background-image: url('https://i.ytimg.com/vi/0ERVq1G8H6g/hqdefault.jpg');"
+          />
+          <noscript>
+            <iframe
+              width="560"
+              height="315"
+              title="Play"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              src="https://www.youtube-nocookie.com/embed/0ERVq1G8H6g?autoplay=1&playsinline=1"
+            ></iframe>
+          </noscript>
         </div>
       </div>
     </div>

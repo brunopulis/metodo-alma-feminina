@@ -1,5 +1,6 @@
 ---
-import Link from "@/components/ui/Link.astro";
+import config from "@/data/site-config.json";
+import Button from "@/components/ui/Button.astro";
 ---
 
 <section id="faq">
@@ -155,10 +156,10 @@ import Link from "@/components/ui/Link.astro";
     class="flex flex-row flex-nowrap gap-4 py-6 m-auto max-w-xs sm:flex-row sm:justify-center sm:max-w-md lg:justify-center"
   >
     <div class="flex w-full sm:w-auto">
-      <Link
-        class="btn-secondary sm:mb-0 w-full"
-        href="https://chk.eduzz.com/89AQJ7P8WD"
-        label="Quero viver essa transformação"/>
+      <Button
+          href={config.checkout.url}
+          label="Vamos começar essa jornada juntas"
+        />
     </div>
   </div>
 </section>

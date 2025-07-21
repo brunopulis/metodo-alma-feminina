@@ -1,4 +1,7 @@
 ---
+// Third-party components
+import { SkipLink } from "accessible-astro-components";
+
 import "@/styles/global.css";
 import "@/styles/styles.scss";
 import "@/styles/transitions.css";
@@ -34,6 +37,7 @@ const {
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
   </head>
   <body>
+    <SkipLink text="Ir para conteúdo principal" target="main-content" />
     <div id="page-wrapper">
       <slot />
     </div>

@@ -1,6 +1,6 @@
 ---
 import config from "@/data/site-config.json";
-import Link from "@/components/ui/Link.astro";
+import Button from "@/components/ui/Button.astro";
 
 const items = [
   {
@@ -34,20 +34,24 @@ const items = [
 ];
 ---
 
-<section class="pb-16 bg-[#FDF8F5]" id="hero-inner">
-  <div class="container">
-    <div class="row">
-      <h2 class="fw-bold text-center">Você já se imaginou...</h2>
+<section id="hero-inner" class="py-16 bg-[#FDF8F5]">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Heading -->
+    <div class="mb-10">
+      <h2 class="text-3xl sm:text-4xl font-bold text-center">
+        Você já se imaginou...
+      </h2>
     </div>
 
-    <ul class="row">
+    <!-- Card Grid -->
+    <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
       {
-        items.map(item => (
+        items.map((item, index) => (
           <li
-            class="col-lg-3 slide-up rounded-xl h-100"
+            class={`slide-up rounded-xl shadow p-6 animate-fade-in-up delay-[${index * 100}ms]`}
           >
-            <article class="p-9">
-              <h3 class="">
+            <article class="h-full">
+              <h3 class={`text-xl font-bold mb-3`}>
                 {item.title}
               </h3>
               <p>
@@ -58,27 +62,12 @@ const items = [
         ))
       }
     </ul>
-
-    <div class="text-center">
-      <Link
+    <!-- CTA Button -->
+    <div class="text-center mt-10">
+      <Button
         href={config.checkout.url}
         label="Vamos começar essa jornada juntas"
       />
     </div>
   </div>
 </section>
-
-<style>
-  .cards {
-    display: grid;
-    grid-template-columns: repeat(1, minmax(0, 1fr));
-
-    @media (min-width: 1024px) {
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
-
-    padding: 1.5rem 0;
-    gap: 2rem;
-  }
-  /* display: grid; grid-template-columns: repeat(1, minmax(0, 1fr));  */
-</style>

@@ -1,23 +1,24 @@
 ---
 import { Image } from "astro:assets";
 
-import Link from "./ui/Link.astro"
+import config from "@/data/site-config.json";
+import Button from "@/components/ui/Button.astro"
 
 import women from "/public/assets/images/mulheres.jpg";
 ---
 
-<section id="step">
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-lg-6">
-        <h2 class="fw-bold display-5">Para quem é a mentoria?</h2>
-        <p class="lead">Para mulheres cristãs que:</p>
-
-        <ul class="list-unstyled">
+<section id="step" class="py-16 bg-[#fff4f2]">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col lg:flex-row items-center gap-12">
+      <!-- Text Column -->
+      <div class="w-full lg:w-1/2">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          Para quem é a mentoria?
+        </h2>
+        <p class="text-lg text-gray-700 mb-6">Para mulheres cristãs que:</p>
+        <ul class="space-y-4 text-gray-700 list-none">
           <li>
-            <p>
-              <strong>Carregam feridas do passado</strong> que impedem seus passos rumo ao futuro que Deus preparou;
-            </p>
+            <p><strong>Carregam feridas do passado</strong> que impedem seus passos rumo ao futuro que Deus preparou;</p>
           </li>
           <li>
             <p><strong>Sentem um vazio inexplicável</strong> mesmo cercadas de pessoas e responsabilidades;</p>
@@ -29,31 +30,31 @@ import women from "/public/assets/images/mulheres.jpg";
             <p><strong>Desejam integrar fé e sabedoria</strong> para viver com autenticidade e propósito;</p>
           </li>
           <li>
-            <p><strong>Buscam uma transformação completa</strong>  que vai além de soluções superficiais.</p>
+            <p><strong>Buscam uma transformação completa</strong> que vai além de soluções superficiais.</p>
           </li>
         </ul>
       </div>
-      <div class="col-lg-6">
+
+      <!-- Image Column -->
+      <div class="w-full lg:w-1/2">
         <Image
           src={women}
           alt="Silvana"
-          class="w-full object-cover object-center"
-          decoding="async"
+          class="w-full h-auto object-cover object-center rounded"
+          width="500"
+          height="500"
           loading="lazy"
-          width={500}
-          height={500}
+          decoding="async"
         />
       </div>
     </div>
-    <div
-      class="flex flex-row flex-nowrap gap-4 py-12 m-auto max-w-xs sm:flex-row sm:justify-center sm:max-w-md lg:justify-center"
-    >
-      <div class="mt-10 flex justify-center">
-      <Link
-        href="https://chk.eduzz.com/89AQJ7P8WD"
-        label="Quero vive essa transformação"
+
+    <!-- CTA Button -->
+    <div class="mt-12 flex justify-center">
+      <Button
+        href={config.checkout.url}
+        label="Vamos começar essa jornada juntas"
       />
-    </div>
     </div>
   </div>
 </section>

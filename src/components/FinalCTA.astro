@@ -2,24 +2,21 @@
 import { Clock, AlertCircle } from "@lucide/astro";
 import config from "@/data/site-config.json";
 
-import Link from "@/components/ui/Link.astro";
+import Button from "@/components/ui/Button.astro";
 ---
 
 <section class="py-16 px-4 mx-auto sm:py-16 lg:px-6 bg-[#FDF8F5]">
-  <div class="mx-auto max-w-screen-sm text-center">
-    <h2
-      class="mb-4 text-3xl tracking-tight font-bold leading-tight text-accent-500"
-    >
+  <div class="max-w-screen-sm mx-auto text-center">
+    <h2 class="mb-4 text-3xl tracking-tight font-bold leading-tight text-purple-600">
       Pronta para viver a mulher que Deus te criou para ser?
     </h2>
-    <p class="mb-6 text-grey-900 md:text-lg">
+    <p class="mb-6 text-gray-900 md:text-lg">
       Chega de viver no automático. Deus tem mais para você — e essa jornada pode ser o começo. Vamos florescer juntas, com propósito, fé e identidade.
     </p>
-
-   <div class="mt-10 flex justify-center">
-      <Link
-        href="https://chk.eduzz.com/89AQJ7P8WD"
-        label="Quero começar minha jornada"
+    <div class="mt-10 flex justify-center">
+      <Button
+        href={config.checkout.url}
+        label="Vamos começar essa jornada juntas"
       />
     </div>
   </div>

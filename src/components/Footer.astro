@@ -6,16 +6,18 @@ import { Heart } from "@lucide/astro";
 const currentYear = new Date().getFullYear();
 ---
 
-<footer class="relative py-6 bg-accent-500 ">
-  <div class="text-center">
-    <p class="flex items-center justify-center text-white text-sm">
-      {config.footer.copyright}
-      Feito com <Heart class="w-4 h-4 mx-1 text-white" /> por
+<footer class="w-full py-14">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="max-w-3xl mx-auto">
+      <p class="flex justify-center">{currentYear} - {config.footer.copyright}</p>
+      <div class="flex space-x-10 justify-center items-center mb-14">
+        Feito com <Heart class="w-4 h-4 mx-1 " /> por
       <a
         rel="noopener"
-        class="text-white underline px-2"
+        class="underline px-2"
         href="https://brunopulis.com">Pulis Studio</a
       >
-    </p>
+      </div>
+    </div>
   </div>
 </footer>

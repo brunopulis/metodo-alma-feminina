@@ -3,7 +3,7 @@ import Layout from "@/layouts/Layout.astro";
 
 // Components
 import Hero from "@/components/Hero.astro";
-import HeroInner from "@/components/HeroInner.astro";
+import Pain from "@/components/Pain.astro";
 import HowWorks from "@/components/HowWorks.astro";
 import Benefits from "@/components/Benefits.astro";
 import Steps from "@/components/Steps.astro";
@@ -12,18 +12,12 @@ import Testimonials from "@/components/Testimonials.astro";
 import FAQ from "@/components/FAQ.astro";
 import FinalCTA from "@/components/FinalCTA.astro";
 import Footer from "@/components/Footer.astro";
-
-// Third-party components
-import { SkipLink } from "accessible-astro-components";
 ---
 
 <Layout title="Método Alma Feminina" description="Bruno Pulis - Engenheiro de Software, desenvolvedor front-end e back-end, especialista em JavaScript, TypeScript, React, Node.js e muito mais.">
-  <header>
-    <SkipLink text="Ir para conteúdo principal" target="main-content" />
-  </header>
   <Hero />
   <main id="main-content">
-    <HeroInner />
+    <Pain />
     <HowWorks />
     <Benefits />
     <Steps />

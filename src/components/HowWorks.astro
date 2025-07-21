@@ -1,5 +1,6 @@
 ---
-import Link from "@/components/ui/Link.astro";
+import config from "@/data/site-config.json";
+import Button from "@/components/ui/Button.astro";
 
 const benefits = [
   {
@@ -24,24 +25,23 @@ const benefits = [
 ];
 ---
 
-<section class="py-16 bg-white" id="benefits">
-  <div class="text-center md:mx-auto mb-8 md:mb-12 max-w-3xl">
-    <p
-      class="font-bold dark:text-blue-200 text-base text-secondary tracking-wide text-uppercase"
-    >
+<section id="benefits" class="py-16 bg-[#fff4f2]">
+  <!-- Header -->
+  <div class="text-center mx-auto mb-12 max-w-3xl">
+    <p class="font-bold text-sm text-accent-800 dark:text-blue-200 uppercase tracking-wide">
       Como funciona
     </p>
-    <h2
-      class="font-bold leading-tighter font-heading tracking-tighter text-heading md:text-4xl text-3xl"
-    >
+    <h2 class="font-heading font-bold tracking-tight text-gray-900 text-3xl md:text-4xl leading-tight">
       O que você irá aprender?
     </h2>
   </div>
-  <div class="container">
-    <ul class="row">
+
+  <!-- Benefits Grid -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
       {
         benefits.map((benefit, index) => (
-          <li class="col-lg-3 slide-up" style={`animation-delay: ${index * 100}ms`}>
+          <li class={`rounded-xl p-6 bg-white shadow-md animate-fade-in-up delay-[${index * 100}ms]`}>
             <article class="benefits__item">
               <p class="text-gray-600 dark:text-gray-300">
                 {benefit.description}
@@ -52,31 +52,12 @@ const benefits = [
       }
     </ul>
 
+    <!-- CTA -->
     <div class="mt-10 flex justify-center">
-      <Link
-        href="https://chk.eduzz.com/89AQJ7P8WD"
-        label="Quero viver essa transformação"
+      <Button
+        href={config.checkout.url}
+        label="Vamos começar essa jornada juntas"
       />
     </div>
   </div>
 </section>
-
-<style lang="scss">
-  .benefits__item {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-
-    transition: all 0.3s ease;
-
-    &:hover,
-    &:focus {
-      transform: translateY(-5px);
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
-    }
-  }
-</style>

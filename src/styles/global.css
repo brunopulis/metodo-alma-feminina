@@ -72,7 +72,7 @@
 }
 
 @theme {
-  --color-primary: #e8333f;
+  --color-primary: #fdf8f5;
   --color-primary-50: #f5f3ff;
   --color-primary-100: #ede9fe;
   --color-primary-200: #ddd6fe;
@@ -97,17 +97,16 @@
   --color-secondary-900: #0f172a;
   --color-secondary-950: #020617;
 
-  --color-accent-50: #fcfdf5;
-  --color-accent-100: #f8fadc;
-  --color-accent-200: #f3f7b0;
-  --color-accent-300: #eef484;
-  --color-accent-400: #e6ee54;
-  --color-accent-500: #8a4f73;
-  --color-accent-600: #bbc40f;
-  --color-accent-700: #99a10d;
-  --color-accent-800: #7c8012;
-  --color-accent-900: #676a14;
-  --color-accent-950: #373b05;
+  --color-accent-50: #f5e8f1;
+  --color-accent-100: #dca2c9;
+  --color-accent-200: #dca2c9;
+  --color-accent-300: #d281b4;
+  --color-accent-400: #cc6da2;
+  --color-accent-500: #c95f92;
+  --color-accent-600: #b75a8a;
+  --color-accent-700: #a0547f;
+  --color-accent-800: #8a4f73;
+  --color-accent-900: #63455c;
 
   --color-warning-50: #fefce8;
   --color-warning-100: #fef9c3;
@@ -175,6 +174,10 @@
   p {
     color: var(--color-errie-black);
   }
+
+  a {
+    text-decoration: none;
+  }
 }
 
 @utility btn {
@@ -182,15 +185,15 @@
 }
 
 @utility btn-primary {
-  @apply btn bg-accent-400 hover:bg-accent-500 text-black shadow-md hover:shadow-lg;
+  @apply btn bg-accent-500 hover:bg-accent-600 no-underline text-white font-semibold py-3 px-6 rounded shadow transition hover:shadow-lg;
 }
 
 @utility btn-secondary {
-  @apply btn bg-primary-600 hover:bg-primary-700 text-white shadow-md hover:shadow-lg;
+  @apply btn bg-accent-500 hover:bg-primary-700 no-underline text-white shadow-md hover:shadow-lg;
 }
 
 @utility btn-accent {
-  @apply btn bg-accent-500 hover:bg-accent-600 text-black shadow-md hover:shadow-lg;
+  @apply btn bg-accent-500 hover:bg-accent-600 no-underline text-black shadow-md hover:shadow-lg;
 }
 
 @utility btn-outline {
@@ -213,9 +216,7 @@
   h1,
   h2,
   h3,
-  h4,
-  h5,
-  h6 {
+  h4 {
     font-family: "Playfair Display", sans-serif;
     text-wrap: balance;
     line-height: 1.2;
