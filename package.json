@@ -24,16 +24,8 @@
     "astro-embed": "^0.9.0",
     "astro-google-analytics": "^1.0.3",
     "astro-robots-txt": "^1.0.0",
-    "bootstrap": "^5.3.7",
     "sharp": "^0.34.2",
     "tailwindcss": "^4.1.7"
   },
-  "packageManager": "pnpm@10.11.0",
-  "devDependencies": {
-    "@types/bootstrap": "^5.2.10",
-    "sass": "^1.89.2",
-    "stylelint": "^16.21.1",
-    "stylelint-config-recommended-scss": "^15.0.1",
-    "stylelint-config-standard": "^38.0.0"
-  }
+  "packageManager": "pnpm@10.11.0"
 }
