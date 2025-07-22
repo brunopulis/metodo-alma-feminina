@@ -1,77 +1,58 @@
 ---
 import config from "@/data/site-config.json";
+import { ChevronRight } from "@lucide/astro";
+
 import Button from "@/components/ui/Button.astro";
+
+const faqs = [
+  {
+    question: "Preciso ter conhecimento da Bíblia para participar?",
+    answer: "Não. A mentoria é para todas — do começo da caminhada até quem já tem intimidade com a Palavra.",
+  },
+  {
+    question: "Como acesso as aulas?",
+    answer: "Você receberá login para uma plataforma online onde poderá assistir às aulas no seu ritmo.",
+  },
+  {
+    question: "E se eu não puder participar da aula ao vivo?",
+    answer: "A gravação ficará disponível, mas recomendamos fortemente que esteja presente para aproveitar ao máximo!",
+  },
+  {
+    question: "Posso participar mesmo sendo tímida?",
+    answer: "Sim! O ambiente é seguro, respeitoso e acolhedor — você será ouvida e amada exatamente como é.",
+  },
+  {
+    question: "Há algum certificado ao final da mentoria?",
+    answer: "Sim! Ao concluir a mentoria, você receberá um certificado de participação.",
+  },
+  {
+    question: "Quais são as formas de pagamento?",
+    answer: "Aceitamos pagamento via Pix, transferência bancária e boleto parcelado.",
+  },
+];
 ---
 
 <section id="faq" class="py-16 bg-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <!-- Section Heading -->
     <div class="text-center mb-12 max-w-3xl mx-auto">
-      <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Perguntas Frequentes</h2>
+      <h2 class="text-3xl md:text-4xl font-bold text-accent-500">
+        Tire suas dúvidas
+      </h2>
     </div>
 
-    <!-- FAQ Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-      <!-- FAQ Item -->
-      <div class="flex">
-        <svg class="flex-shrink-0 h-6 w-6 text-purple-600 mr-3 mt-1" viewBox="0 0 24 24">
-          <use xlink:href="#ai:tabler:chevron-right"></use>
-        </svg>
-        <div>
-          <h3 class="font-semibold text-lg">Preciso ter conhecimento da Bíblia para participar?</h3>
-          <p class="text-gray-600 mt-2">Não. A mentoria é para todas — do começo da caminhada até quem já tem intimidade com a Palavra.</p>
-        </div>
-      </div>
-
-      <div class="flex">
-        <svg class="flex-shrink-0 h-6 w-6 text-purple-600 mr-3 mt-1" viewBox="0 0 24 24">
-          <use xlink:href="#ai:tabler:chevron-right"></use>
-        </svg>
-        <div>
-          <h3 class="font-semibold text-lg">Como acesso as aulas?</h3>
-          <p class="text-gray-600 mt-2">Você receberá login para uma plataforma online onde poderá assistir às aulas no seu ritmo.</p>
-        </div>
-      </div>
-
-      <div class="flex">
-        <svg class="flex-shrink-0 h-6 w-6 text-purple-600 mr-3 mt-1" viewBox="0 0 24 24">
-          <use xlink:href="#ai:tabler:chevron-right"></use>
-        </svg>
-        <div>
-          <h3 class="font-semibold text-lg">E se eu não puder participar da aula ao vivo?</h3>
-          <p class="text-gray-600 mt-2">A gravação ficará disponível, mas recomendamos fortemente que esteja presente para aproveitar ao máximo!</p>
-        </div>
-      </div>
-
-      <div class="flex">
-        <svg class="flex-shrink-0 h-6 w-6 text-purple-600 mr-3 mt-1" viewBox="0 0 24 24">
-          <use xlink:href="#ai:tabler:chevron-right"></use>
-        </svg>
-        <div>
-          <h3 class="font-semibold text-lg">Posso participar mesmo sendo tímida?</h3>
-          <p class="text-gray-600 mt-2">Sim! O ambiente é seguro, respeitoso e acolhedor — você será ouvida e amada exatamente como é.</p>
-        </div>
-      </div>
-
-      <div class="flex">
-        <svg class="flex-shrink-0 h-6 w-6 text-purple-600 mr-3 mt-1" viewBox="0 0 24 24">
-          <use xlink:href="#ai:tabler:chevron-right"></use>
-        </svg>
-        <div>
-          <h3 class="font-semibold text-lg">Há algum certificado ao final da mentoria?</h3>
-          <p class="text-gray-600 mt-2">Sim! Ao concluir a mentoria, você receberá um certificado de participação.</p>
-        </div>
-      </div>
-
-      <div class="flex">
-        <svg class="flex-shrink-0 h-6 w-6 text-purple-600 mr-3 mt-1" viewBox="0 0 24 24">
-          <use xlink:href="#ai:tabler:chevron-right"></use>
-        </svg>
-        <div>
-          <h3 class="font-semibold text-lg">Quais são as formas de pagamento?</h3>
-          <p class="text-gray-600 mt-2">Aceitamos pagamento via Pix, transferência bancária e boleto parcelado.</p>
-        </div>
-      </div>
+      {
+        faqs.map((faq) => (
+          <div class="p-6">
+            <div class="flex items-center mb-4">
+              <ChevronRight class="h-6 w-6 text-accent-500 mr-3" aria-hidden="true" />
+              <h3 class="text-lg font-semibold">{faq.question}</h3>
+            </div>
+            <p class="text-gray-600">{faq.answer}</p>
+          </div>
+        ))
+      }
     </div>
 
     <!-- CTA Button -->

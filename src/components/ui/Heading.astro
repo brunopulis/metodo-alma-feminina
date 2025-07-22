@@ -1,0 +1,15 @@
+---
+interface Props {
+  level?: number;
+  class?: string;
+  children: any;
+}
+
+const { level = "", class: className = "", children } = Astro.props;
+
+const Tag = `h${level}` as keyof HTMLElementTagNameMap;
+---
+
+<Tag class="text-accent-500 font-bold tracking-tight mb-6">
+  {children}
+</Tag>

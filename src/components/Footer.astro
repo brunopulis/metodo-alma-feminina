@@ -1,23 +1,28 @@
 ---
 import config from "@/data/site-config.json";
 
-import { Heart } from "@lucide/astro";
+import { ExternalLink } from "@lucide/astro";
 
 const currentYear = new Date().getFullYear();
 ---
 
-<footer class="w-full py-14">
+<footer class="w-full py-5 bg-[#FFF4F2]">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div class="max-w-3xl mx-auto">
-      <p class="flex justify-center">{currentYear} - {config.footer.copyright}</p>
-      <div class="flex space-x-10 justify-center items-center mb-14">
-        Feito com <Heart class="w-4 h-4 mx-1 " /> por
-      <a
-        rel="noopener"
-        class="underline px-2"
-        href="https://brunopulis.com">Pulis Studio</a
-      >
-      </div>
+    <div class="max-w-7xl mx-auto">
+      <p class="flex justify-center font-bold">
+        {currentYear} - {config.footer.copyright}
+      </p>
     </div>
+  </div>
+  <div
+    class="border-t border-gray-200 mt-8 py-4 text-center text-gray-500 text-sm"
+  >
+    <p class="flex justify-center text-[12px]">
+      Feito com <span class="px-2" role="img" aria-label="amor">❤️</span> por
+      <a rel="noopener" class="underline px-2" href="https://brunopulis.com">
+        Pulis Studio
+        <ExternalLink class="inline h-3 w-3 ml-1" aria-hidden="true" />
+      </a>
+    </p>
   </div>
 </footer>

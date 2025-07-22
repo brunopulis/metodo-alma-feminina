@@ -11,21 +11,28 @@
   "youtube": "https://youtu.be/0ERVq1G8H6g?si=MXsjdNRJhsZLfqpH",
   "seo": {
     "titleTemplate": "%s | Método Alma Feminina",
-    "defaultTitle": "Método Alma Feminina - RPM Brasil",
+    "defaultTitle": "Método Alma Feminina",
     "defaultDescription": "Descubra como o RPM pode abrir caminhos reais para a aprendizagem, autonomia e expressão de pessoas autistas não falantes",
     "defaultImage": "/og-image.jpg",
     "keywords": [
-      "rpm",
-      "autismo",
-      "comunicação alternativa",
-      "educação especial",
-      "inclusão"
+      "alma feminina",
+      "metodoo alma feminina",
+      "feminilidade",
+      "feminilidade biblica",
+      "feminilidade cristã",
+      "mulheres",
+      "mulheres cristãs",
+      "mulheres na bíblia",
+      "mulheres na igreja",
+      "mulheres na teologia",
+      "mulheres e feminilidade",
+      "mulheres e feminilidade cristã"
     ]
   },
   "checkout": {
     "url": "https://chk.eduzz.com/89AQJ7P8WD"
   },
   "footer": {
-    "copyright": "© 2025 Método Alma Feminina. Todos os direitos reservados."
+    "copyright": "Método Alma Feminina. Todos os direitos reservados."
   }
 }

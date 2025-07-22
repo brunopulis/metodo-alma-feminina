@@ -1,7 +1,7 @@
 ---
 import config from "@/data/site-config.json";
 
-import { BookText, CheckCircle, ArrowRight } from "@lucide/astro";
+import { Heart, Church, Users, Dumbbell } from "@lucide/astro";
 
 import Button from "@/components/ui/Button.astro";
 
@@ -26,8 +26,8 @@ const benefits = [
 
 <section class="py-16 bg-[#FDF8F5]" id="benefits">
   <div class="text-center mx-auto mb-12 max-w-3xl">
-    <h2 class="font-heading font-bold tracking-tight text-gray-900 text-3xl md:text-4xl leading-tight">
-      Benefícios da Mentoria
+    <h2 class="font-heading font-bold tracking-tight text-accent-500 text-3xl md:text-4xl leading-tight">
+      Por que essa mentoria vai transformar sua vida
     </h2>
   </div>
 
@@ -39,31 +39,27 @@ const benefits = [
         </svg>
       </div>
       <div class="mt-0.5">
-        <h3 class="text-xl md:text-[1.3rem] font-bold">Devocional Diário em Vídeo</h3>
+        <h3 class="text-xl md:text-[1.3rem] text-accent-500 font-bold">Devocional Diário em Vídeo</h3>
         <p class="text-gray-600 mt-3">Reflexões profundas que alinham psicologia e espiritualidade, gerando transformação real.</p>
       </div>
     </div>
 
     <div class="flex max-w-md">
       <div class="flex justify-center">
-        <svg class="bg-accent-500 text-white h-10 w-10 md:h-12 md:w-12 p-2 md:p-3 rounded-full mr-4" viewBox="0 0 24 24">
-          <use xlink:href="#ai:tabler:heart"></use>
-        </svg>
+        <Heart class="bg-accent-500 text-white h-10 w-10 md:h-12 md:w-12 p-2 md:p-3 rounded-full mr-4" aria-hidden="true" />
       </div>
       <div class="mt-0.5">
-        <h3 class="text-xl md:text-[1.3rem] font-bold">Material complementar em PDF</h3>
+        <h3 class="text-xl md:text-[1.3rem] text-accent-500 font-bold">Material complementar em PDF</h3>
         <p class="text-gray-600 mt-3">Com espaço para <span lang="en">journaling</span>, perguntas de reflexão e práticas semanais.</p>
       </div>
     </div>
 
     <div class="flex max-w-md">
       <div class="flex justify-center">
-        <svg class="bg-accent-500 text-white h-10 w-10 md:h-12 md:w-12 p-2 md:p-3 rounded-full mr-4" viewBox="0 0 24 24">
-          <use xlink:href="#ai:tabler:chalkboard"></use>
-        </svg>
+        <Users class="bg-accent-500 text-white h-10 w-10 md:h-12 md:w-12 p-2 md:p-3 rounded-full mr-4" aria-hidden="true" />
       </div>
       <div class="mt-0.5">
-        <h3 class="text-xl md:text-[1.3rem] font-bold">Comunidade exclusiva</h3>
+        <h3 class="text-xl md:text-[1.3rem] text-accent-500 font-bold">Comunidade exclusiva</h3>
         <p class="text-gray-600 mt-3">Uma rede de apoio e encorajamento, com um grupo de mulheres com o mesmo propósito.</p>
       </div>
     </div>
@@ -75,31 +71,27 @@ const benefits = [
         </svg>
       </div>
       <div class="mt-0.5">
-        <h3 class="text-xl md:text-[1.3rem] font-bold">Acompanhamento próximo</h3>
+        <h3 class="text-xl md:text-[1.3rem] text-accent-500 font-bold">Acompanhamento próximo</h3>
         <p class="text-gray-600 mt-3">Encontros ao vivo e gravações disponíveis, para você desfrutar da sua transformação.</p>
       </div>
     </div>
 
     <div class="flex max-w-md">
       <div class="flex justify-center">
-        <svg class="bg-accent-500 text-white h-10 w-10 md:h-12 md:w-12 p-2 md:p-3 rounded-full mr-4" viewBox="0 0 24 24">
-          <use xlink:href="#ai:tabler:brand-whatsapp"></use>
-        </svg>
+        <Dumbbell class="bg-accent-500 text-white h-10 w-10 md:h-12 md:w-12 p-2 md:p-3 rounded-full mr-4" aria-hidden="true" />
       </div>
       <div class="mt-0.5">
-        <h3 class="text-xl md:text-[1.3rem] font-bold">Exercícios terapêuticos</h3>
+        <h3 class="text-xl md:text-[1.3rem] text-accent-500 font-bold">Exercícios terapêuticos</h3>
         <p class="text-gray-600 mt-3">Exercícios baseados na Logoterapia e na Terapia Cognitivo-Comportamental.</p>
       </div>
     </div>
 
     <div class="flex max-w-md">
       <div class="flex justify-center">
-        <svg class="bg-accent-500 text-white h-10 w-10 md:h-12 md:w-12 p-2 md:p-3 rounded-full mr-4" viewBox="0 0 24 24">
-          <use xlink:href="#ai:tabler:certificate"></use>
-        </svg>
+        <Church class="bg-accent-500 text-white h-10 w-10 md:h-12 md:w-12 p-2 md:p-3 rounded-full mr-4" aria-hidden="true" />
       </div>
       <div class="mt-0.5">
-        <h3 class="text-xl md:text-[1.3rem] font-bold">Aprofundamento teológico</h3>
+        <h3 class="text-xl md:text-[1.3rem] text-accent-500 font-bold">Aprofundamento teológico</h3>
         <p class="text-gray-600 mt-3">Estudos práticos e acessíveis para a vida emocional da mulher cristã.</p>
       </div>
     </div>
